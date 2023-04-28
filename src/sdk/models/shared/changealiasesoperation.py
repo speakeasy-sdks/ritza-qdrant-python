@@ -12,5 +12,6 @@ from typing import Any
 class ChangeAliasesOperation:
     r"""Operation for performing changes of collection aliases. Alias changes are atomic, meaning that no collection modifications can happen between alias operations."""
     
-    actions: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('actions') }})  
+    actions: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('actions') }})
+
     

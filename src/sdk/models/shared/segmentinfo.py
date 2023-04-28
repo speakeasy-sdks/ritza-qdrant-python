@@ -13,13 +13,21 @@ from sdk import utils
 class SegmentInfo:
     r"""Aggregated information about segment"""
     
-    disk_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disk_usage_bytes') }})  
-    index_schema: dict[str, shared_payloadindexinfo.PayloadIndexInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index_schema') }})  
-    is_appendable: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_appendable') }})  
-    num_deleted_vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_deleted_vectors') }})  
-    num_points: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_points') }})  
-    num_vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_vectors') }})  
-    ram_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ram_usage_bytes') }})  
+    disk_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disk_usage_bytes') }})
+
+    index_schema: dict[str, shared_payloadindexinfo.PayloadIndexInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index_schema') }})
+
+    is_appendable: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_appendable') }})
+
+    num_deleted_vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_deleted_vectors') }})
+
+    num_points: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_points') }})
+
+    num_vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_vectors') }})
+
+    ram_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ram_usage_bytes') }})
+
     segment_type: shared_segmenttype_enum.SegmentTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segment_type') }})
-    r"""Type of segment"""  
+
+    r"""Type of segment"""
     

@@ -11,5 +11,6 @@ from sdk import utils
 class MatchText:
     r"""Full-text match of the strings."""
     
-    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text') }})  
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text') }})
+
     

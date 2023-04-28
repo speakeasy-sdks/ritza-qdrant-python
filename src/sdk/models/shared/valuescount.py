@@ -13,11 +13,15 @@ class ValuesCount:
     r"""Values count filter request"""
     
     gt: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gt'), 'exclude': lambda f: f is None }})
-    r"""point.key.length() > values_count.gt"""  
+
+    r"""point.key.length() > values_count.gt"""
     gte: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gte'), 'exclude': lambda f: f is None }})
-    r"""point.key.length() >= values_count.gte"""  
+
+    r"""point.key.length() >= values_count.gte"""
     lt: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lt'), 'exclude': lambda f: f is None }})
-    r"""point.key.length() < values_count.lt"""  
+
+    r"""point.key.length() < values_count.lt"""
     lte: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lte'), 'exclude': lambda f: f is None }})
-    r"""point.key.length() <= values_count.lte"""  
+
+    r"""point.key.length() <= values_count.lte"""
     

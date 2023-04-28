@@ -11,11 +11,18 @@ from typing import Optional
 @dataclasses.dataclass
 class RunningEnvironmentTelemetry:
     
-    cpu_flags: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cpu_flags') }})  
-    is_docker: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_docker') }})  
-    cores: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cores'), 'exclude': lambda f: f is None }})  
-    disk_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disk_size'), 'exclude': lambda f: f is None }})  
-    distribution: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distribution'), 'exclude': lambda f: f is None }})  
-    distribution_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distribution_version'), 'exclude': lambda f: f is None }})  
-    ram_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ram_size'), 'exclude': lambda f: f is None }})  
+    cpu_flags: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cpu_flags') }})
+
+    is_docker: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_docker') }})
+
+    cores: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cores'), 'exclude': lambda f: f is None }})
+
+    disk_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disk_size'), 'exclude': lambda f: f is None }})
+
+    distribution: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distribution'), 'exclude': lambda f: f is None }})
+
+    distribution_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distribution_version'), 'exclude': lambda f: f is None }})
+
+    ram_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ram_size'), 'exclude': lambda f: f is None }})
+
     

@@ -13,5 +13,6 @@ class IsNullCondition:
     r"""Select points with null payload for a specified field"""
     
     is_null: shared_payloadfield.PayloadField = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_null') }})
-    r"""Payload field"""  
+
+    r"""Payload field"""
     

@@ -10,5 +10,6 @@ from sdk import utils
 @dataclasses.dataclass
 class P2pConfigTelemetry:
     
-    connection_pool_size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_pool_size') }})  
+    connection_pool_size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_pool_size') }})
+
     

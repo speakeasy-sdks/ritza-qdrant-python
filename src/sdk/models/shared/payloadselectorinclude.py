@@ -12,5 +12,6 @@ class PayloadSelectorInclude:
     r"""Specifies how to treat payload selector"""
     
     include: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('include') }})
-    r"""Only include this payload keys"""  
+
+    r"""Only include this payload keys"""
     

@@ -12,9 +12,12 @@ from typing import Optional
 @dataclasses.dataclass
 class ScalarQuantizationConfig:
     
-    type: shared_scalartype_enum.ScalarTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})  
+    type: shared_scalartype_enum.ScalarTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+
     always_ram: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('always_ram'), 'exclude': lambda f: f is None }})
-    r"""If true - quantized vectors always will be stored in RAM, ignoring the config of main storage"""  
+
+    r"""If true - quantized vectors always will be stored in RAM, ignoring the config of main storage"""
     quantile: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantile'), 'exclude': lambda f: f is None }})
-    r"""Quantile for quantization. Expected value range in [0.5, 1.0]. If not set - use the whole range of values"""  
+
+    r"""Quantile for quantization. Expected value range in [0.5, 1.0]. If not set - use the whole range of values"""
     

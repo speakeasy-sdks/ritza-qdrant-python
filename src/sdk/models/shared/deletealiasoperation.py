@@ -13,5 +13,6 @@ class DeleteAliasOperation:
     r"""Delete alias if exists"""
     
     delete_alias: shared_deletealias.DeleteAlias = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('delete_alias') }})
-    r"""Delete alias if exists"""  
+
+    r"""Delete alias if exists"""
     

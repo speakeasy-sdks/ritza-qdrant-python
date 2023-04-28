@@ -13,7 +13,10 @@ from typing import Optional
 @dataclasses.dataclass
 class LocalShardTelemetry:
     
-    optimizations: shared_optimizertelemetry.OptimizerTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizations') }})  
-    segments: list[shared_segmenttelemetry.SegmentTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segments') }})  
-    variant_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('variant_name'), 'exclude': lambda f: f is None }})  
+    optimizations: shared_optimizertelemetry.OptimizerTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizations') }})
+
+    segments: list[shared_segmenttelemetry.SegmentTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segments') }})
+
+    variant_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('variant_name'), 'exclude': lambda f: f is None }})
+
     

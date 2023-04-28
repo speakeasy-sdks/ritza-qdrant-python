@@ -13,25 +13,33 @@ class OptimizersConfigDiff:
     r"""Custom params for Optimizers.  If none - values from service configuration file are used. This operation is blocking, it will only proceed ones all current optimizations are complete"""
     
     default_segment_number: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('default_segment_number'), 'exclude': lambda f: f is None }})
+
     r"""Target amount of segments optimizer will try to keep. Real amount of segments may vary depending on multiple parameters: - Amount of stored points - Current write RPS
     
     It is recommended to select default number of segments as a factor of the number of search threads, so that each segment would be handled evenly by one of the threads If `default_segment_number = 0`, will be automatically selected by the number of available CPUs
-    """  
+    """
     deleted_threshold: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deleted_threshold'), 'exclude': lambda f: f is None }})
-    r"""The minimal fraction of deleted vectors in a segment, required to perform segment optimization"""  
+
+    r"""The minimal fraction of deleted vectors in a segment, required to perform segment optimization"""
     flush_interval_sec: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('flush_interval_sec'), 'exclude': lambda f: f is None }})
-    r"""Minimum interval between forced flushes."""  
+
+    r"""Minimum interval between forced flushes."""
     indexing_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('indexing_threshold'), 'exclude': lambda f: f is None }})
-    r"""Maximum size (in KiloBytes) of vectors allowed for plain index. Default value based on <https://github.com/google-research/google-research/blob/master/scann/docs/algorithms.md> Note: 1Kb = 1 vector of size 256"""  
+
+    r"""Maximum size (in KiloBytes) of vectors allowed for plain index. Default value based on <https://github.com/google-research/google-research/blob/master/scann/docs/algorithms.md> Note: 1Kb = 1 vector of size 256"""
     max_optimization_threads: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_optimization_threads'), 'exclude': lambda f: f is None }})
-    r"""Maximum available threads for optimization workers"""  
+
+    r"""Maximum available threads for optimization workers"""
     max_segment_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_segment_size'), 'exclude': lambda f: f is None }})
+
     r"""Do not create segments larger this size (in KiloBytes). Large segments might require disproportionately long indexation times, therefore it makes sense to limit the size of segments.
     
     If indexation speed have more priority for your - make this parameter lower. If search speed is more important - make this parameter higher. Note: 1Kb = 1 vector of size 256
-    """  
+    """
     memmap_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memmap_threshold'), 'exclude': lambda f: f is None }})
-    r"""Maximum size (in KiloBytes) of vectors to store in-memory per segment. Segments larger than this threshold will be stored as read-only memmaped file. To enable memmap storage, lower the threshold Note: 1Kb = 1 vector of size 256"""  
+
+    r"""Maximum size (in KiloBytes) of vectors to store in-memory per segment. Segments larger than this threshold will be stored as read-only memmaped file. To enable memmap storage, lower the threshold Note: 1Kb = 1 vector of size 256"""
     vacuum_min_vector_number: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vacuum_min_vector_number'), 'exclude': lambda f: f is None }})
-    r"""The minimal number of vectors in a segment, required to perform segment optimization"""  
+
+    r"""The minimal number of vectors in a segment, required to perform segment optimization"""
     

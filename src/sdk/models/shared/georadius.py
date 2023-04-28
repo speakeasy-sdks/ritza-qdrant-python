@@ -16,7 +16,9 @@ class GeoRadius:
     """
     
     center: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('center') }})
-    r"""Geo point payload schema"""  
+
+    r"""Geo point payload schema"""
     radius: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('radius') }})
-    r"""Radius of the area in meters"""  
+
+    r"""Radius of the area in meters"""
     

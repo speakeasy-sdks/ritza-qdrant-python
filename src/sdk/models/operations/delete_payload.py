@@ -17,13 +17,17 @@ from typing import Optional
 class DeletePayloadRequest:
     
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
-    r"""Name of the collection to delete from"""  
+
+    r"""Name of the collection to delete from"""
     delete_payload: Optional[shared_deletepayload.DeletePayload] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    r"""delete payload on points"""  
+
+    r"""delete payload on points"""
     ordering: Optional[shared_writeordering_enum.WriteOrderingEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
-    r"""define ordering guarantees for the operation"""  
+
+    r"""define ordering guarantees for the operation"""
     wait: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wait', 'style': 'form', 'explode': True }})
-    r"""If true, wait for changes to actually happen"""  
+
+    r"""If true, wait for changes to actually happen"""
     
 class DeletePayload200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -34,20 +38,28 @@ class DeletePayload200ApplicationJSONStatusEnum(str, Enum):
 class DeletePayload200ApplicationJSON:
     r"""successful operation"""
     
-    result: Optional[shared_updateresult.UpdateResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})  
-    status: Optional[DeletePayload200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+    result: Optional[shared_updateresult.UpdateResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+
+    status: Optional[DeletePayload200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class DeletePayloadResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     delete_payload_200_application_json_object: Optional[DeletePayload200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
+
+    r"""successful operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

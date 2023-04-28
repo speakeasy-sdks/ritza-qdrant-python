@@ -12,6 +12,8 @@ from typing import Optional
 class MessageSendErrors:
     r"""Message send failures for a particular peer"""
     
-    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})  
-    latest_error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('latest_error'), 'exclude': lambda f: f is None }})  
+    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})
+
+    latest_error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('latest_error'), 'exclude': lambda f: f is None }})
+
     

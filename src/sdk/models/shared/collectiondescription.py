@@ -10,5 +10,6 @@ from sdk import utils
 @dataclasses.dataclass
 class CollectionDescription:
     
-    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})  
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
+
     

@@ -15,11 +15,14 @@ from typing import Any, Optional
 class GetPointRequest:
     
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
-    r"""Name of the collection to retrieve from"""  
+
+    r"""Name of the collection to retrieve from"""
     id: Any = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    r"""Id of the point"""  
+
+    r"""Id of the point"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
-    r"""Define read consistency guarantees for the operation"""  
+
+    r"""Define read consistency guarantees for the operation"""
     
 class GetPoint200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -31,20 +34,28 @@ class GetPoint200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_record.Record] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    r"""Point data"""  
-    status: Optional[GetPoint200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+
+    r"""Point data"""
+    status: Optional[GetPoint200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class GetPointResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
+
+    r"""error"""
     get_point_200_application_json_object: Optional[GetPoint200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""successful operation"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

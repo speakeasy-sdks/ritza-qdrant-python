@@ -12,9 +12,12 @@ from typing import Any, Optional
 class PointStruct:
     
     id: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    r"""Type, used for specifying point ID in user interface"""  
+
+    r"""Type, used for specifying point ID in user interface"""
     vector: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector') }})
-    r"""Full vector data per point separator with single and multiple vector modes"""  
+
+    r"""Full vector data per point separator with single and multiple vector modes"""
     payload: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload'), 'exclude': lambda f: f is None }})
-    r"""Payload values (optional)"""  
+
+    r"""Payload values (optional)"""
     

@@ -11,5 +11,6 @@ from sdk import utils
 @dataclasses.dataclass
 class CollectionsResponse:
     
-    collections: list[shared_collectiondescription.CollectionDescription] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections') }})  
+    collections: list[shared_collectiondescription.CollectionDescription] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections') }})
+
     

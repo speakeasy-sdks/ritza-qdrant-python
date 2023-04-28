@@ -12,7 +12,8 @@ from typing import Any, Optional
 class ErrorResponseStatus:
     
     error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error'), 'exclude': lambda f: f is None }})
-    r"""Description of the occurred error."""  
+
+    r"""Description of the occurred error."""
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -20,8 +21,11 @@ class ErrorResponseStatus:
 class ErrorResponse:
     r"""error"""
     
-    result: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})  
-    status: Optional[ErrorResponseStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+    result: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+
+    status: Optional[ErrorResponseStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     

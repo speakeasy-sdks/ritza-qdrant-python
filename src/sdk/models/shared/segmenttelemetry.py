@@ -14,9 +14,13 @@ from sdk import utils
 @dataclasses.dataclass
 class SegmentTelemetry:
     
-    config: shared_segmentconfig.SegmentConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config') }})  
+    config: shared_segmentconfig.SegmentConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config') }})
+
     info: shared_segmentinfo.SegmentInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info') }})
-    r"""Aggregated information about segment"""  
-    payload_field_indices: list[shared_payloadindextelemetry.PayloadIndexTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload_field_indices') }})  
-    vector_index_searches: list[shared_vectorindexsearchestelemetry.VectorIndexSearchesTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector_index_searches') }})  
+
+    r"""Aggregated information about segment"""
+    payload_field_indices: list[shared_payloadindextelemetry.PayloadIndexTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload_field_indices') }})
+
+    vector_index_searches: list[shared_vectorindexsearchestelemetry.VectorIndexSearchesTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector_index_searches') }})
+
     

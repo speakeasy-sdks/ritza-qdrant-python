@@ -13,7 +13,9 @@ class UpdateCollection:
     r"""Operation for updating parameters of the existing collection"""
     
     optimizers_config: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizers_config'), 'exclude': lambda f: f is None }})
-    r"""Custom params for Optimizers.  If none - values from service configuration file are used. This operation is blocking, it will only proceed ones all current optimizations are complete"""  
+
+    r"""Custom params for Optimizers.  If none - values from service configuration file are used. This operation is blocking, it will only proceed ones all current optimizations are complete"""
     params: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('params'), 'exclude': lambda f: f is None }})
-    r"""Collection base params.  If none - values from service configuration file are used."""  
+
+    r"""Collection base params.  If none - values from service configuration file are used."""
     

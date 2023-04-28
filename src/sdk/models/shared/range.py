@@ -13,11 +13,15 @@ class Range:
     r"""Range filter request"""
     
     gt: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gt'), 'exclude': lambda f: f is None }})
-    r"""point.key > range.gt"""  
+
+    r"""point.key > range.gt"""
     gte: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gte'), 'exclude': lambda f: f is None }})
-    r"""point.key >= range.gte"""  
+
+    r"""point.key >= range.gte"""
     lt: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lt'), 'exclude': lambda f: f is None }})
-    r"""point.key < range.lt"""  
+
+    r"""point.key < range.lt"""
     lte: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lte'), 'exclude': lambda f: f is None }})
-    r"""point.key <= range.lte"""  
+
+    r"""point.key <= range.lte"""
     

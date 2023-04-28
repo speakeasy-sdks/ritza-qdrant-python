@@ -12,5 +12,6 @@ class PayloadField:
     r"""Payload field"""
     
     key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
-    r"""Payload field name"""  
+
+    r"""Payload field name"""
     

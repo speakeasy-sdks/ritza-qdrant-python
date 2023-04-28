@@ -15,13 +15,16 @@ from typing import Optional
 class CreateCollectionRequest:
     
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
-    r"""Name of the new collection"""  
+
+    r"""Name of the new collection"""
     create_collection: Optional[shared_createcollection.CreateCollection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    r"""Parameters of a new collection"""  
+
+    r"""Parameters of a new collection"""
     timeout: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timeout', 'style': 'form', 'explode': True }})
+
     r"""Wait for operation commit timeout in seconds.
     If timeout is reached - request will return with service error.
-    """  
+    """
     
 class CreateCollection200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -32,20 +35,28 @@ class CreateCollection200ApplicationJSONStatusEnum(str, Enum):
 class CreateCollection200ApplicationJSON:
     r"""successful operation"""
     
-    result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})  
-    status: Optional[CreateCollection200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+    result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+
+    status: Optional[CreateCollection200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class CreateCollectionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     create_collection_200_application_json_object: Optional[CreateCollection200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
+
+    r"""successful operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

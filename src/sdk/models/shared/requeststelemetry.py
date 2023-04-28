@@ -12,6 +12,8 @@ from sdk import utils
 @dataclasses.dataclass
 class RequestsTelemetry:
     
-    grpc: shared_grpctelemetry.GrpcTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('grpc') }})  
-    rest: shared_webapitelemetry.WebAPITelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rest') }})  
+    grpc: shared_grpctelemetry.GrpcTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('grpc') }})
+
+    rest: shared_webapitelemetry.WebAPITelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rest') }})
+
     

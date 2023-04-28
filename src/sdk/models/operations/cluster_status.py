@@ -24,8 +24,10 @@ class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3ConsensusThrea
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3:
     r"""Information about current consensus thread status"""
     
-    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})  
-    err: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('err') }})  
+    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
+
+    err: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('err') }})
+
     
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThreadStatusEnum(str, Enum):
     STOPPED = 'stopped'
@@ -36,7 +38,8 @@ class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThrea
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2:
     r"""Information about current consensus thread status"""
     
-    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})  
+    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
+
     
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThreadStatusEnum(str, Enum):
     WORKING = 'working'
@@ -47,8 +50,10 @@ class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThrea
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1:
     r"""Information about current consensus thread status"""
     
-    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})  
-    last_update: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_update'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})  
+    consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
+
+    last_update: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_update'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+
     
 class ClusterStatus200ApplicationJSONResult2StatusEnum(str, Enum):
     ENABLED = 'enabled'
@@ -60,16 +65,22 @@ class ClusterStatus200ApplicationJSONResult2:
     r"""Description of enabled cluster"""
     
     consensus_thread_status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
-    r"""Information about current consensus thread status"""  
+
+    r"""Information about current consensus thread status"""
     message_send_failures: dict[str, shared_messagesenderrors.MessageSendErrors] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message_send_failures') }})
-    r"""Consequent failures of message send operations in consensus by peer address. On the first success to send to that peer - entry is removed from this hashmap."""  
+
+    r"""Consequent failures of message send operations in consensus by peer address. On the first success to send to that peer - entry is removed from this hashmap."""
     peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id') }})
-    r"""ID of this peer"""  
+
+    r"""ID of this peer"""
     peers: dict[str, shared_peerinfo.PeerInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peers') }})
-    r"""Peers composition of the cluster with main information"""  
+
+    r"""Peers composition of the cluster with main information"""
     raft_info: shared_raftinfo.RaftInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raft_info') }})
-    r"""Summary information about the current raft state"""  
-    status: ClusterStatus200ApplicationJSONResult2StatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})  
+
+    r"""Summary information about the current raft state"""
+    status: ClusterStatus200ApplicationJSONResult2StatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+
     
 class ClusterStatus200ApplicationJSONResult1StatusEnum(str, Enum):
     DISABLED = 'disabled'
@@ -80,7 +91,8 @@ class ClusterStatus200ApplicationJSONResult1StatusEnum(str, Enum):
 class ClusterStatus200ApplicationJSONResult1:
     r"""Information about current cluster status and structure"""
     
-    status: ClusterStatus200ApplicationJSONResult1StatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})  
+    status: ClusterStatus200ApplicationJSONResult1StatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+
     
 class ClusterStatus200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -92,20 +104,28 @@ class ClusterStatus200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    r"""Information about current cluster status and structure"""  
-    status: Optional[ClusterStatus200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+
+    r"""Information about current cluster status and structure"""
+    status: Optional[ClusterStatus200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class ClusterStatusResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     cluster_status_200_application_json_object: Optional[ClusterStatus200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
+
+    r"""successful operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

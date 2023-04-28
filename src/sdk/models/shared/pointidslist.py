@@ -11,5 +11,6 @@ from typing import Any
 @dataclasses.dataclass
 class PointIdsList:
     
-    points: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})  
+    points: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})
+
     

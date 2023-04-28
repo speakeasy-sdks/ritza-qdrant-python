@@ -10,15 +10,20 @@ from typing import Optional
 class MetricsRequest:
     
     anonymize: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'anonymize', 'style': 'form', 'explode': True }})
-    r"""If true, anonymize result"""  
+
+    r"""If true, anonymize result"""
     
 
 @dataclasses.dataclass
 class MetricsResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     metrics_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
-    r"""Metrics data in Prometheus format"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""Metrics data in Prometheus format"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

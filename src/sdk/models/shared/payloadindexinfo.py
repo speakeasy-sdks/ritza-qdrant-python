@@ -14,8 +14,11 @@ class PayloadIndexInfo:
     r"""Display payload field type & index information"""
     
     data_type: shared_payloadschematype_enum.PayloadSchemaTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data_type') }})
-    r"""All possible names of payload types"""  
+
+    r"""All possible names of payload types"""
     points: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})
-    r"""Number of points indexed with this index"""  
-    params: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('params'), 'exclude': lambda f: f is None }})  
+
+    r"""Number of points indexed with this index"""
+    params: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('params'), 'exclude': lambda f: f is None }})
+
     

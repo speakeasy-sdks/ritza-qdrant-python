@@ -12,9 +12,12 @@ from sdk import utils
 class LocalShardInfo:
     
     points_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points_count') }})
-    r"""Number of points in the shard"""  
+
+    r"""Number of points in the shard"""
     shard_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shard_id') }})
-    r"""Local shard id"""  
+
+    r"""Local shard id"""
     state: shared_replicastate_enum.ReplicaStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
-    r"""State of the single shard within a replica set."""  
+
+    r"""State of the single shard within a replica set."""
     

@@ -12,5 +12,6 @@ from sdk import utils
 class ScalarQuantization:
     r"""Custom params for quantization. If none - values from collection configuration are used."""
     
-    scalar: shared_scalarquantizationconfig.ScalarQuantizationConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scalar') }})  
+    scalar: shared_scalarquantizationconfig.ScalarQuantizationConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scalar') }})
+
     

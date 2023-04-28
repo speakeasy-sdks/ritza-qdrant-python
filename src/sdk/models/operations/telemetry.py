@@ -15,7 +15,8 @@ from typing import Optional
 class TelemetryRequest:
     
     anonymize: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'anonymize', 'style': 'form', 'explode': True }})
-    r"""If true, anonymize result"""  
+
+    r"""If true, anonymize result"""
     
 class Telemetry200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -26,20 +27,28 @@ class Telemetry200ApplicationJSONStatusEnum(str, Enum):
 class Telemetry200ApplicationJSON:
     r"""successful operation"""
     
-    result: Optional[shared_telemetrydata.TelemetryData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})  
-    status: Optional[Telemetry200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+    result: Optional[shared_telemetrydata.TelemetryData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+
+    status: Optional[Telemetry200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class TelemetryResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""error"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     telemetry_200_application_json_object: Optional[Telemetry200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
+
+    r"""successful operation"""
     

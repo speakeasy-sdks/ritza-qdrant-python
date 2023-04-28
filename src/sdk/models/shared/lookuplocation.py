@@ -13,7 +13,9 @@ class LookupLocation:
     r"""Defines a location to use for looking up the vector. Specifies collection and vector field name."""
     
     collection: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection') }})
-    r"""Name of the collection used for lookup"""  
+
+    r"""Name of the collection used for lookup"""
     vector: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector'), 'exclude': lambda f: f is None }})
-    r"""Optional name of the vector field within the collection. If not provided, the default vector field will be used."""  
+
+    r"""Optional name of the vector field within the collection. If not provided, the default vector field will be used."""
     

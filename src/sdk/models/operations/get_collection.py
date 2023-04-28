@@ -15,7 +15,8 @@ from typing import Optional
 class GetCollectionRequest:
     
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
-    r"""Name of the collection to retrieve"""  
+
+    r"""Name of the collection to retrieve"""
     
 class GetCollection200ApplicationJSONStatusEnum(str, Enum):
     OK = 'ok'
@@ -27,20 +28,28 @@ class GetCollection200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_collectioninfo.CollectionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    r"""Current statistics and configuration of the collection"""  
-    status: Optional[GetCollection200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})  
+
+    r"""Current statistics and configuration of the collection"""
+    status: Optional[GetCollection200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-    r"""Time spent to process this request"""  
+
+    r"""Time spent to process this request"""
     
 
 @dataclasses.dataclass
 class GetCollectionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-    r"""error"""  
+
+    r"""error"""
     get_collection_200_application_json_object: Optional[GetCollection200ApplicationJSON] = dataclasses.field(default=None)
-    r"""successful operation"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""successful operation"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     

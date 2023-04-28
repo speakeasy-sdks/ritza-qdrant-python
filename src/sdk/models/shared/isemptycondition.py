@@ -13,5 +13,6 @@ class IsEmptyCondition:
     r"""Select points with empty payload for a specified field"""
     
     is_empty: shared_payloadfield.PayloadField = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_empty') }})
-    r"""Payload field"""  
+
+    r"""Payload field"""
     

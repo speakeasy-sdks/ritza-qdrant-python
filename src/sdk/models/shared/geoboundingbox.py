@@ -16,7 +16,9 @@ class GeoBoundingBox:
     """
     
     bottom_right: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bottom_right') }})
-    r"""Geo point payload schema"""  
+
+    r"""Geo point payload schema"""
     top_left: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('top_left') }})
-    r"""Geo point payload schema"""  
+
+    r"""Geo point payload schema"""
     

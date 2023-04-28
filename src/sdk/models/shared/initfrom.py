@@ -11,5 +11,6 @@ from sdk import utils
 class InitFrom:
     r"""Operation for creating new collection and (optionally) specify index params"""
     
-    collection: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection') }})  
+    collection: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection') }})
+
     

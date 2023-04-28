@@ -11,5 +11,6 @@ from sdk import utils
 @dataclasses.dataclass
 class PointsList:
     
-    points: list[shared_pointstruct.PointStruct] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})  
+    points: list[shared_pointstruct.PointStruct] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})
+
     

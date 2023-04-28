@@ -12,5 +12,6 @@ from typing import Any
 class MatchValue:
     r"""Exact match of the given value"""
     
-    value: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})  
+    value: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
+
     

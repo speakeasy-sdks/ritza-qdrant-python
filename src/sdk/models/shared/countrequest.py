@@ -13,7 +13,9 @@ class CountRequest:
     r"""Count Request Counts the number of points which satisfy the given filter. If filter is not provided, the count of all points in the collection will be returned."""
     
     exact: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('exact'), 'exclude': lambda f: f is None }})
-    r"""If true, count exact number of points. If false, count approximate number of points faster. Approximate count might be unreliable during the indexing process. Default: true"""  
+
+    r"""If true, count exact number of points. If false, count approximate number of points faster. Approximate count might be unreliable during the indexing process. Default: true"""
     filter: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
-    r"""Look only for points which satisfies this conditions"""  
+
+    r"""Look only for points which satisfies this conditions"""
     
