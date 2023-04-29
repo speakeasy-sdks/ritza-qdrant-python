@@ -20,9 +20,7 @@ class ClusterStatusTelemetryConsensusThreadStatus3:
     r"""Information about current consensus thread status"""
     
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus3ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
-
     err: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('err') }})
-
     
 class ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatusEnum(str, Enum):
     STOPPED = 'stopped'
@@ -34,7 +32,6 @@ class ClusterStatusTelemetryConsensusThreadStatus2:
     r"""Information about current consensus thread status"""
     
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
-
     
 class ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatusEnum(str, Enum):
     WORKING = 'working'
@@ -46,9 +43,7 @@ class ClusterStatusTelemetryConsensusThreadStatus1:
     r"""Information about current consensus thread status"""
     
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
-
     last_update: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_update'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -56,20 +51,12 @@ class ClusterStatusTelemetryConsensusThreadStatus1:
 class ClusterStatusTelemetry:
     
     commit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('commit') }})
-
     consensus_thread_status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
-
     r"""Information about current consensus thread status"""
     is_voter: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_voter') }})
-
     number_of_peers: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_peers') }})
-
     pending_operations: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pending_operations') }})
-
     term: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('term') }})
-
     peer_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id'), 'exclude': lambda f: f is None }})
-
     role: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
-
     

@@ -14,9 +14,7 @@ class ScrollResult:
     r"""Result of the points read request"""
     
     points: list[shared_record.Record] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points') }})
-
     r"""List of retrieved points"""
     next_page_offset: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('next_page_offset'), 'exclude': lambda f: f is None }})
-
     r"""Offset which should be used to retrieve a next page result"""
     

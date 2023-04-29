@@ -15,14 +15,9 @@ class TextIndexParams:
     r"""Payload type with parameters"""
     
     type: shared_textindextype_enum.TextIndexTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-
     lowercase: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lowercase'), 'exclude': lambda f: f is None }})
-
     r"""If true, lowercase all tokens. Default: true"""
     max_token_len: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_token_len'), 'exclude': lambda f: f is None }})
-
     min_token_len: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_token_len'), 'exclude': lambda f: f is None }})
-
     tokenizer: Optional[shared_tokenizertype_enum.TokenizerTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenizer'), 'exclude': lambda f: f is None }})
-
     

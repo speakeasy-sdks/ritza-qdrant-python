@@ -12,12 +12,9 @@ from sdk import utils
 class RemoteShardInfo:
     
     peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id') }})
-
     r"""Remote peer id"""
     shard_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shard_id') }})
-
     r"""Remote shard id"""
     state: shared_replicastate_enum.ReplicaStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
-
     r"""State of the single shard within a replica set."""
     

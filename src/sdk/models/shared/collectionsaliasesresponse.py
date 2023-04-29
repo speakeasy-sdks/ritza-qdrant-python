@@ -12,5 +12,4 @@ from sdk import utils
 class CollectionsAliasesResponse:
     
     aliases: list[shared_aliasdescription.AliasDescription] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aliases') }})
-
     

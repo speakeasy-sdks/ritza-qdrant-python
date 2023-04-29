@@ -13,9 +13,7 @@ class WalConfigDiff:
     r"""Custom params for WAL. If none - values from service configuration file are used."""
     
     wal_capacity_mb: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wal_capacity_mb'), 'exclude': lambda f: f is None }})
-
     r"""Size of a single WAL segment in MB"""
     wal_segments_ahead: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wal_segments_ahead'), 'exclude': lambda f: f is None }})
-
     r"""Number of WAL segments to create ahead of actually used ones"""
     

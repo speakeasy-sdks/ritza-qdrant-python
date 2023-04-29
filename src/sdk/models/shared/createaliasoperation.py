@@ -13,6 +13,5 @@ class CreateAliasOperation:
     r"""Group of all the possible operations related to collection aliases"""
     
     create_alias: shared_createalias.CreateAlias = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('create_alias') }})
-
     r"""Create alternative name for a collection. Collection will be available under both names for search, retrieve,"""
     

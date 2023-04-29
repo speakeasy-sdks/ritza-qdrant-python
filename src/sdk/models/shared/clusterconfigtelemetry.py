@@ -13,9 +13,6 @@ from sdk import utils
 class ClusterConfigTelemetry:
     
     consensus: shared_consensusconfigtelemetry.ConsensusConfigTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus') }})
-
     grpc_timeout_ms: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('grpc_timeout_ms') }})
-
     p2p: shared_p2pconfigtelemetry.P2pConfigTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('p2p') }})
-
     

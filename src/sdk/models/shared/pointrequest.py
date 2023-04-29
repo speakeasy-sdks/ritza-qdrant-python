@@ -13,12 +13,9 @@ class PointRequest:
     r"""List of points to retrieve"""
     
     ids: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ids') }})
-
     r"""Look for points with ids"""
     with_payload: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('with_payload'), 'exclude': lambda f: f is None }})
-
     r"""Select which payload to return with the response. Default: All"""
     with_vector: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('with_vector'), 'exclude': lambda f: f is None }})
-
     r"""Options for specifying which vector to include"""
     

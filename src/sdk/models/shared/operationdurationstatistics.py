@@ -15,15 +15,9 @@ from typing import Optional
 class OperationDurationStatistics:
     
     count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})
-
     avg_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_duration_micros'), 'exclude': lambda f: f is None }})
-
     fail_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fail_count'), 'exclude': lambda f: f is None }})
-
     last_responded: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_responded'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
-
     max_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_duration_micros'), 'exclude': lambda f: f is None }})
-
     min_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_duration_micros'), 'exclude': lambda f: f is None }})
-
     

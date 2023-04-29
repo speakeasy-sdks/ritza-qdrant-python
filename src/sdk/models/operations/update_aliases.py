@@ -15,10 +15,8 @@ from typing import Optional
 class UpdateAliasesRequest:
     
     change_aliases_operation: Optional[shared_changealiasesoperation.ChangeAliasesOperation] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     r"""Alias update operations"""
     timeout: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timeout', 'style': 'form', 'explode': True }})
-
     r"""Wait for operation commit timeout in seconds.
     If timeout is reached - request will return with service error.
     """
@@ -33,11 +31,8 @@ class UpdateAliases200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-
     status: Optional[UpdateAliases200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-
     r"""Time spent to process this request"""
     
 
@@ -45,15 +40,10 @@ class UpdateAliases200ApplicationJSON:
 class UpdateAliasesResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     update_aliases_200_application_json_object: Optional[UpdateAliases200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""successful operation"""
     

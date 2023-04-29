@@ -15,7 +15,6 @@ class OptimizerTelemetryStatus2:
     r"""Something wrong happened with optimizers"""
     
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
-
     
 class OptimizerTelemetryStatus1Enum(str, Enum):
     r"""Optimizers are reporting as expected"""
@@ -27,8 +26,6 @@ class OptimizerTelemetryStatus1Enum(str, Enum):
 class OptimizerTelemetry:
     
     optimizations: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizations') }})
-
     status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-
     r"""Current state of the collection"""
     

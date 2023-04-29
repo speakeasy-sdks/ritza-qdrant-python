@@ -12,7 +12,5 @@ from typing import Any, Optional
 class CollectionsTelemetry:
     
     number_of_collections: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_collections') }})
-
     collections: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections'), 'exclude': lambda f: f is None }})
-
     

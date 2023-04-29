@@ -16,13 +16,10 @@ from typing import Any, Optional
 class SearchPointsRequest:
     
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
-
     r"""Name of the collection to search in"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
-
     r"""Define read consistency guarantees for the operation"""
     search_request: Optional[shared_searchrequest.SearchRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     r"""Search request with optional filtering"""
     
 class SearchPoints200ApplicationJSONStatusEnum(str, Enum):
@@ -35,11 +32,8 @@ class SearchPoints200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[list[shared_scoredpoint.ScoredPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-
     status: Optional[SearchPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-
     r"""Time spent to process this request"""
     
 
@@ -47,15 +41,10 @@ class SearchPoints200ApplicationJSON:
 class SearchPointsResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     search_points_200_application_json_object: Optional[SearchPoints200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""successful operation"""
     

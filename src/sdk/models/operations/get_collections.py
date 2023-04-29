@@ -20,11 +20,8 @@ class GetCollections200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_collectionsresponse.CollectionsResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-
     status: Optional[GetCollections200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-
     r"""Time spent to process this request"""
     
 
@@ -32,15 +29,10 @@ class GetCollections200ApplicationJSON:
 class GetCollectionsResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-
     r"""error"""
     get_collections_200_application_json_object: Optional[GetCollections200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

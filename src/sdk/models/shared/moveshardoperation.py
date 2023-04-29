@@ -12,5 +12,4 @@ from sdk import utils
 class MoveShardOperation:
     
     move_shard: shared_moveshard.MoveShard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('move_shard') }})
-
     

@@ -12,5 +12,4 @@ from sdk import utils
 class PointsBatch:
     
     batch: shared_batch.Batch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('batch') }})
-
     

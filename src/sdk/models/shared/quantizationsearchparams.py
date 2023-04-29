@@ -13,9 +13,7 @@ class QuantizationSearchParams:
     r"""Additional parameters of the search"""
     
     ignore: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ignore'), 'exclude': lambda f: f is None }})
-
     r"""If true, quantized vectors are ignored. Default is false."""
     rescore: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rescore'), 'exclude': lambda f: f is None }})
-
     r"""If true, use original vectors to re-score top-k results. Might require more time in case if original vectors are stored on disk. Default is false."""
     

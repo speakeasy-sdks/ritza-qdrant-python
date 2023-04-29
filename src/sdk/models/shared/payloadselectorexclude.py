@@ -12,6 +12,5 @@ class PayloadSelectorExclude:
     r"""Specifies how to treat payload selector"""
     
     exclude: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('exclude') }})
-
     r"""Exclude this fields from returning payload"""
     

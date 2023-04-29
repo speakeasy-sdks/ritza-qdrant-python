@@ -13,18 +13,13 @@ class ScoredPoint:
     r"""Search result"""
     
     id: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-
     r"""Type, used for specifying point ID in user interface"""
     score: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score') }})
-
     r"""Points vector distance to the query vector"""
     version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('version') }})
-
     r"""Point version"""
     payload: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload'), 'exclude': lambda f: f is None }})
-
     r"""Payload - values assigned to the point"""
     vector: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector'), 'exclude': lambda f: f is None }})
-
     r"""Vector of the point"""
     

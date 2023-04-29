@@ -13,21 +13,15 @@ class HnswConfigDiff:
     r"""Custom params for HNSW index. If none - values from collection configuration are used."""
     
     ef_construct: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ef_construct'), 'exclude': lambda f: f is None }})
-
     r"""Number of neighbours to consider during the index building. Larger the value - more accurate the search, more time required to build the index."""
     full_scan_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('full_scan_threshold'), 'exclude': lambda f: f is None }})
-
     r"""Minimal size (in KiloBytes) of vectors for additional payload-based indexing. If payload chunk is smaller than `full_scan_threshold_kb` additional indexing won't be used - in this case full-scan search should be preferred by query planner and additional indexing is not required. Note: 1Kb = 1 vector of size 256"""
     m: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('m'), 'exclude': lambda f: f is None }})
-
     r"""Number of edges per node in the index graph. Larger the value - more accurate the search, more space required."""
     max_indexing_threads: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_indexing_threads'), 'exclude': lambda f: f is None }})
-
     r"""Number of parallel threads used for background index building. If 0 - auto selection."""
     on_disk: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('on_disk'), 'exclude': lambda f: f is None }})
-
     r"""Store HNSW index on disk. If set to false, the index will be stored in RAM. Default: false"""
     payload_m: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload_m'), 'exclude': lambda f: f is None }})
-
     r"""Custom M param for additional payload-aware HNSW links. If not set, default M will be used."""
     

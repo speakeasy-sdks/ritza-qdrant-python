@@ -13,9 +13,7 @@ class CollectionParamsDiff:
     r"""Collection base params.  If none - values from service configuration file are used."""
     
     replication_factor: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('replication_factor'), 'exclude': lambda f: f is None }})
-
     r"""Number of replicas for each shard"""
     write_consistency_factor: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_consistency_factor'), 'exclude': lambda f: f is None }})
-
     r"""Minimal number successful responses from replicas to consider operation successful"""
     

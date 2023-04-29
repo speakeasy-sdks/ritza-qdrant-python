@@ -12,5 +12,4 @@ from sdk import utils
 class AbortTransferOperation:
     
     abort_transfer: shared_moveshard.MoveShard = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('abort_transfer') }})
-
     

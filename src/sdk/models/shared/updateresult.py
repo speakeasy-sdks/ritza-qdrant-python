@@ -12,9 +12,7 @@ from sdk import utils
 class UpdateResult:
     
     operation_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operation_id') }})
-
     r"""Sequential number of the operation"""
     status: shared_updatestatus_enum.UpdateStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-
     r"""`Acknowledged` - Request is saved to WAL and will be process in a queue. `Completed` - Request is completed, changes are actual."""
     

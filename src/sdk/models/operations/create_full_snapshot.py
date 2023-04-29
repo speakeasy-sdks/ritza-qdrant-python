@@ -15,7 +15,6 @@ from typing import Optional
 class CreateFullSnapshotRequest:
     
     wait: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wait', 'style': 'form', 'explode': True }})
-
     r"""If true, wait for changes to actually happen. If false - let changes happen in background. Default is true."""
     
 class CreateFullSnapshot202ApplicationJSONStatusEnum(str, Enum):
@@ -28,9 +27,7 @@ class CreateFullSnapshot202ApplicationJSON:
     r"""operation is accepted"""
     
     status: Optional[CreateFullSnapshot202ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-
     r"""Time spent to process this request"""
     
 class CreateFullSnapshot200ApplicationJSONStatusEnum(str, Enum):
@@ -43,11 +40,8 @@ class CreateFullSnapshot200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_snapshotdescription.SnapshotDescription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-
     status: Optional[CreateFullSnapshot200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
-
     r"""Time spent to process this request"""
     
 
@@ -55,18 +49,12 @@ class CreateFullSnapshot200ApplicationJSON:
 class CreateFullSnapshotResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     create_full_snapshot_200_application_json_object: Optional[CreateFullSnapshot200ApplicationJSON] = dataclasses.field(default=None)
-
     r"""successful operation"""
     create_full_snapshot_202_application_json_object: Optional[CreateFullSnapshot202ApplicationJSON] = dataclasses.field(default=None)
-
     r"""operation is accepted"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
-
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

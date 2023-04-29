@@ -12,9 +12,6 @@ from typing import Any, Optional
 class Batch:
     
     ids: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ids') }})
-
     vectors: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vectors') }})
-
     payloads: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payloads'), 'exclude': lambda f: f is None }})
-
     

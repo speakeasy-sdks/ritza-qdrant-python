@@ -12,5 +12,4 @@ from sdk import utils
 class FilterSelector:
     
     filter: shared_filter.Filter = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter') }})
-
     
