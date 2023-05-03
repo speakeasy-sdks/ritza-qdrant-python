@@ -39,7 +39,7 @@ s = sdk.SDK()
 
 
 req = operations.CollectionClusterInfoRequest(
-    collection_name="vel",
+    collection_name='vel',
 )
 
 res = s.collections.collection_cluster_info(req)
@@ -63,9 +63,9 @@ s = sdk.SDK()
 
 req = operations.CreateCollectionRequest(
     create_collection=shared.CreateCollection(
-        hnsw_config="deserunt",
+        hnsw_config='deserunt',
         init_from=shared.InitFrom(
-            collection="iure",
+            collection='iure',
         ),
         on_disk_payload=False,
         optimizers_config=shared.OptimizersConfigDiff(
@@ -78,17 +78,17 @@ req = operations.CreateCollectionRequest(
             memmap_threshold=791725,
             vacuum_min_vector_number=812169,
         ),
-        quantization_config="iusto",
+        quantization_config='iusto',
         replication_factor=568045,
         shard_number=392785,
         vectors=shared.VectorParams(
-            distance="Dot",
-            hnsw_config="ab",
+            distance=shared.DistanceEnum.DOT,
+            hnsw_config='ab',
             quantization_config=shared.ScalarQuantization(
                 scalar=shared.ScalarQuantizationConfig(
                     always_ram=False,
                     quantile=871.29,
-                    type="int8",
+                    type=shared.ScalarTypeEnum.INT8,
                 ),
             ),
             size=648172,
@@ -99,7 +99,7 @@ req = operations.CreateCollectionRequest(
         ),
         write_consistency_factor=957156,
     ),
-    collection_name="quo",
+    collection_name='quo',
     timeout=140350,
 )
 
@@ -124,11 +124,11 @@ s = sdk.SDK()
 
 req = operations.CreateFieldIndexRequest(
     create_field_index=shared.CreateFieldIndex(
-        field_name="at",
-        field_schema="maiores",
+        field_name='at',
+        field_schema='maiores',
     ),
-    collection_name="molestiae",
-    ordering="strong",
+    collection_name='molestiae',
+    ordering=shared.WriteOrderingEnum.STRONG,
     wait=False,
 )
 
@@ -152,7 +152,7 @@ s = sdk.SDK()
 
 
 req = operations.CreateSnapshotRequest(
-    collection_name="quod",
+    collection_name='quod',
     wait=False,
 )
 
@@ -176,7 +176,7 @@ s = sdk.SDK()
 
 
 req = operations.DeleteCollectionRequest(
-    collection_name="esse",
+    collection_name='esse',
     timeout=520478,
 )
 
@@ -200,9 +200,9 @@ s = sdk.SDK()
 
 
 req = operations.DeleteFieldIndexRequest(
-    collection_name="porro",
-    field_name="dolorum",
-    ordering="weak",
+    collection_name='porro',
+    field_name='dolorum',
+    ordering=shared.WriteOrderingEnum.WEAK,
     wait=False,
 )
 
@@ -226,8 +226,8 @@ s = sdk.SDK()
 
 
 req = operations.DeleteSnapshotRequest(
-    collection_name="nam",
-    snapshot_name="officia",
+    collection_name='nam',
+    snapshot_name='officia',
     wait=False,
 )
 
@@ -251,7 +251,7 @@ s = sdk.SDK()
 
 
 req = operations.GetCollectionRequest(
-    collection_name="occaecati",
+    collection_name='occaecati',
 )
 
 res = s.collections.get_collection(req)
@@ -274,7 +274,7 @@ s = sdk.SDK()
 
 
 req = operations.GetCollectionAliasesRequest(
-    collection_name="fugit",
+    collection_name='fugit',
 )
 
 res = s.collections.get_collection_aliases(req)
@@ -335,8 +335,8 @@ s = sdk.SDK()
 
 
 req = operations.GetSnapshotRequest(
-    collection_name="deleniti",
-    snapshot_name="hic",
+    collection_name='deleniti',
+    snapshot_name='hic',
 )
 
 res = s.collections.get_snapshot(req)
@@ -359,7 +359,7 @@ s = sdk.SDK()
 
 
 req = operations.ListSnapshotsRequest(
-    collection_name="optio",
+    collection_name='optio',
 )
 
 res = s.collections.list_snapshots(req)
@@ -383,10 +383,10 @@ s = sdk.SDK()
 
 req = operations.RecoverFromSnapshotRequest(
     snapshot_recover=shared.SnapshotRecover(
-        location="https://canine-harmonise.info",
-        priority="snapshot",
+        location='https://canine-harmonise.info',
+        priority=shared.SnapshotPriorityEnum.SNAPSHOT,
     ),
-    collection_name="impedit",
+    collection_name='impedit',
     wait=False,
 )
 
@@ -412,12 +412,12 @@ s = sdk.SDK()
 req = operations.RecoverFromUploadedSnapshotRequest(
     request_body=operations.RecoverFromUploadedSnapshotRequestBody(
         snapshot=operations.RecoverFromUploadedSnapshotRequestBodySnapshot(
-            content="cum".encode(),
-            snapshot="esse",
+            content='cum'.encode(),
+            snapshot='esse',
         ),
     ),
-    collection_name="ipsum",
-    priority="replica",
+    collection_name='ipsum',
+    priority=shared.SnapshotPriorityEnum.REPLICA,
     wait=False,
 )
 
@@ -445,8 +445,8 @@ req = operations.UpdateAliasesRequest(
         actions=[
             shared.CreateAliasOperation(
                 create_alias=shared.CreateAlias(
-                    alias_name="ad",
-                    collection_name="natus",
+                    alias_name='ad',
+                    collection_name='natus',
                 ),
             ),
         ],
@@ -475,10 +475,10 @@ s = sdk.SDK()
 
 req = operations.UpdateCollectionRequest(
     update_collection=shared.UpdateCollection(
-        optimizers_config="dolor",
-        params="laboriosam",
+        optimizers_config='dolor',
+        params='laboriosam',
     ),
-    collection_name="hic",
+    collection_name='hic',
     timeout=902599,
 )
 
@@ -509,7 +509,7 @@ req = operations.UpdateCollectionClusterRequest(
             to_peer_id=613064,
         ),
     ),
-    collection_name="iure",
+    collection_name='iure',
     timeout=902349,
 )
 

@@ -39,60 +39,60 @@ req = operations.ClearPayloadRequest(
         filter=shared.Filter(
             must=[
                 shared.FieldCondition(
-                    geo_bounding_box="est",
-                    geo_radius="laborum",
-                    key="dolores",
+                    geo_bounding_box='est',
+                    geo_radius='laborum',
+                    key='dolores',
                     match=shared.MatchText(
-                        text="explicabo",
+                        text='explicabo',
                     ),
-                    range="enim",
-                    values_count="nemo",
+                    range='enim',
+                    values_count='nemo',
                 ),
             ],
             must_not=[
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="accusantium",
+                        key='accusantium',
                     ),
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="culpa",
+                        key='culpa',
                     ),
                 ),
             ],
             should=[
                 shared.Filter(),
                 shared.FieldCondition(
-                    geo_bounding_box="dolorem",
-                    geo_radius="consequuntur",
-                    key="repellat",
-                    match="occaecati",
+                    geo_bounding_box='dolorem',
+                    geo_radius='consequuntur',
+                    key='repellat',
+                    match='occaecati',
                     range=shared.Range(
                         gt=4143.69,
                         gte=4663.11,
                         lt=4746.97,
                         lte=2444.25,
                     ),
-                    values_count="quia",
+                    values_count='quia',
                 ),
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="vitae",
+                        key='vitae',
                     ),
                 ),
                 shared.HasIDCondition(
                     has_id=[
                         138183,
-                        "3f5ad019-da1f-4fe7-8f09-7b0074f15471",
-                        "5e6e13b9-9d48-48e1-a91e-450ad2abd442",
+                        '3f5ad019-da1f-4fe7-8f09-7b0074f15471',
+                        '5e6e13b9-9d48-48e1-a91e-450ad2abd442',
                     ],
                 ),
             ],
         ),
     ),
-    collection_name="aliquid",
-    ordering="medium",
+    collection_name='aliquid',
+    ordering=shared.WriteOrderingEnum.MEDIUM,
     wait=False,
 )
 
@@ -118,9 +118,9 @@ s = sdk.SDK()
 req = operations.CountPointsRequest(
     count_request=shared.CountRequest(
         exact=False,
-        filter="perferendis",
+        filter='perferendis',
     ),
-    collection_name="magni",
+    collection_name='magni',
 )
 
 res = s.points.count_points(req)
@@ -144,18 +144,18 @@ s = sdk.SDK()
 
 req = operations.DeletePayloadRequest(
     delete_payload=shared.DeletePayload(
-        filter="ipsam",
+        filter='ipsam',
         keys=[
-            "fugit",
+            'fugit',
         ],
         points=[
-            "4bb4f63c-969e-49a3-afa7-7dfb14cd66ae",
+            '4bb4f63c-969e-49a3-afa7-7dfb14cd66ae',
             581273,
             881736,
         ],
     ),
-    collection_name="delectus",
-    ordering="strong",
+    collection_name='delectus',
+    ordering=shared.WriteOrderingEnum.STRONG,
     wait=False,
 )
 
@@ -184,14 +184,14 @@ req = operations.DeletePointsRequest(
             must=[
                 shared.HasIDCondition(
                     has_id=[
-                        "f3a66997-074b-4a44-a9b6-e2141959890a",
-                        "a563e251-6fe4-4c8b-b11e-5b7fd2ed0289",
+                        'f3a66997-074b-4a44-a9b6-e2141959890a',
+                        'a563e251-6fe4-4c8b-b11e-5b7fd2ed0289',
                         123820,
                     ],
                 ),
                 shared.HasIDCondition(
                     has_id=[
-                        "c692601f-b576-4b0d-9f0d-30c5fbb25870",
+                        'c692601f-b576-4b0d-9f0d-30c5fbb25870',
                         199996,
                         18521,
                         793698,
@@ -199,34 +199,34 @@ req = operations.DeletePointsRequest(
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="dolor",
+                        key='dolor',
                     ),
                 ),
             ],
             must_not=[
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="hic",
+                        key='hic',
                     ),
                 ),
                 shared.Filter(),
                 shared.HasIDCondition(
                     has_id=[
-                        "0c28909b-3fe4-49a8-99cb-f48633323f9b",
+                        '0c28909b-3fe4-49a8-99cb-f48633323f9b',
                         490459,
-                        "3a410067-4ebf-4692-80d1-ba77a89ebf73",
+                        '3a410067-4ebf-4692-80d1-ba77a89ebf73',
                     ],
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="id",
+                        key='id',
                     ),
                 ),
             ],
             should=[
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="aspernatur",
+                        key='aspernatur',
                     ),
                 ),
                 shared.FieldCondition(
@@ -247,18 +247,18 @@ req = operations.DeletePointsRequest(
                         ),
                         radius=3246.83,
                     ),
-                    key="repellendus",
-                    match="similique",
+                    key='repellendus',
+                    match='similique',
                     range=shared.Range(
                         gt=8726.51,
                         gte=3118.6,
                         lt=2735.42,
                         lte=4254.51,
                     ),
-                    values_count="officiis",
+                    values_count='officiis',
                 ),
                 shared.FieldCondition(
-                    geo_bounding_box="a",
+                    geo_bounding_box='a',
                     geo_radius=shared.GeoRadius(
                         center=shared.GeoPoint(
                             lat=6874.88,
@@ -266,9 +266,9 @@ req = operations.DeletePointsRequest(
                         ),
                         radius=2155.07,
                     ),
-                    key="quisquam",
-                    match="amet",
-                    range="accusamus",
+                    key='quisquam',
+                    match='amet',
+                    range='accusamus',
                     values_count=shared.ValuesCount(
                         gt=313692,
                         gte=213312,
@@ -278,14 +278,14 @@ req = operations.DeletePointsRequest(
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="sit",
+                        key='sit',
                     ),
                 ),
             ],
         ),
     ),
-    collection_name="expedita",
-    ordering="weak",
+    collection_name='expedita',
+    ordering=shared.WriteOrderingEnum.WEAK,
     wait=False,
 )
 
@@ -309,7 +309,7 @@ s = sdk.SDK()
 
 
 req = operations.GetPointRequest(
-    collection_name="sed",
+    collection_name='sed',
     consistency=730442,
     id=646265,
 )
@@ -339,12 +339,12 @@ req = operations.GetPointsRequest(
             277628,
             586784,
         ],
-        with_payload="pariatur",
+        with_payload='pariatur',
         with_vector=[
-            "laborum",
+            'laborum',
         ],
     ),
-    collection_name="totam",
+    collection_name='totam',
     consistency=132068,
 )
 
@@ -374,26 +374,26 @@ req = operations.OverwritePayloadRequest(
                 shared.HasIDCondition(
                     has_id=[
                         565421,
-                        "2322715b-f0cb-4b1e-b1b8-b90f3443a110",
+                        '2322715b-f0cb-4b1e-b1b8-b90f3443a110',
                     ],
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="itaque",
+                        key='itaque',
                     ),
                 ),
                 shared.FieldCondition(
-                    geo_bounding_box="repellendus",
-                    geo_radius="doloribus",
-                    key="ut",
-                    match="cupiditate",
+                    geo_bounding_box='repellendus',
+                    geo_radius='doloribus',
+                    key='ut',
+                    match='cupiditate',
                     range=shared.Range(
                         gt=639.55,
                         gte=5123.93,
                         lt=4856.28,
                         lte=5804.47,
                     ),
-                    values_count="quisquam",
+                    values_count='quisquam',
                 ),
             ],
             must_not=[
@@ -407,15 +407,15 @@ req = operations.OverwritePayloadRequest(
                 shared.Filter(),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="hic",
+                        key='hic',
                     ),
                 ),
             ],
             should=[
                 shared.HasIDCondition(
                     has_id=[
-                        "bd74dd39-c0f5-4d2c-bf7c-70a45626d436",
-                        "13f16d9f-5fce-46c5-9614-6c3e250fb008",
+                        'bd74dd39-c0f5-4d2c-bf7c-70a45626d436',
+                        '13f16d9f-5fce-46c5-9614-6c3e250fb008',
                     ],
                 ),
                 shared.HasIDCondition(
@@ -425,9 +425,9 @@ req = operations.OverwritePayloadRequest(
                     ],
                 ),
                 shared.FieldCondition(
-                    geo_bounding_box="laborum",
-                    geo_radius="velit",
-                    key="eum",
+                    geo_bounding_box='laborum',
+                    geo_radius='velit',
+                    key='eum',
                     match=shared.MatchAny(
                         any=[
                             860552,
@@ -452,18 +452,18 @@ req = operations.OverwritePayloadRequest(
             ],
         ),
         payload={
-            "rem": "fuga",
-            "reprehenderit": "quidem",
+            "rem": 'fuga',
+            "reprehenderit": 'quidem',
         },
         points=[
             433439,
             826871,
             509342,
-            "10ab3cdc-a425-4190-8e52-3c7e0bc7178e",
+            '10ab3cdc-a425-4190-8e52-3c7e0bc7178e',
         ],
     ),
-    collection_name="aliquam",
-    ordering="medium",
+    collection_name='aliquam',
+    ordering=shared.WriteOrderingEnum.MEDIUM,
     wait=False,
 )
 
@@ -493,7 +493,7 @@ req = operations.RecommendBatchPointsRequest(
                 filter=shared.Filter(
                     must=[
                         shared.FieldCondition(
-                            geo_bounding_box="molestiae",
+                            geo_bounding_box='molestiae',
                             geo_radius=shared.GeoRadius(
                                 center=shared.GeoPoint(
                                     lat=7836.48,
@@ -501,11 +501,11 @@ req = operations.RecommendBatchPointsRequest(
                                 ),
                                 radius=5564.29,
                             ),
-                            key="praesentium",
+                            key='praesentium',
                             match=shared.MatchText(
-                                text="fugit",
+                                text='fugit',
                             ),
-                            range="mollitia",
+                            range='mollitia',
                             values_count=shared.ValuesCount(
                                 gt=539224,
                                 gte=128860,
@@ -514,7 +514,7 @@ req = operations.RecommendBatchPointsRequest(
                             ),
                         ),
                         shared.FieldCondition(
-                            geo_bounding_box="consequuntur",
+                            geo_bounding_box='consequuntur',
                             geo_radius=shared.GeoRadius(
                                 center=shared.GeoPoint(
                                     lat=1294.12,
@@ -522,11 +522,11 @@ req = operations.RecommendBatchPointsRequest(
                                 ),
                                 radius=5789.22,
                             ),
-                            key="atque",
+                            key='atque',
                             match=shared.MatchText(
-                                text="eveniet",
+                                text='eveniet',
                             ),
-                            range="veritatis",
+                            range='veritatis',
                             values_count=shared.ValuesCount(
                                 gt=800379,
                                 gte=724168,
@@ -535,11 +535,11 @@ req = operations.RecommendBatchPointsRequest(
                             ),
                         ),
                         shared.FieldCondition(
-                            geo_bounding_box="vel",
-                            geo_radius="molestiae",
-                            key="rerum",
-                            match="minima",
-                            range="eligendi",
+                            geo_bounding_box='vel',
+                            geo_radius='molestiae',
+                            key='rerum',
+                            match='minima',
+                            range='eligendi',
                             values_count=shared.ValuesCount(
                                 gt=636061,
                                 gte=731398,
@@ -565,15 +565,15 @@ req = operations.RecommendBatchPointsRequest(
                                 ),
                                 radius=9537.22,
                             ),
-                            key="nulla",
-                            match="esse",
+                            key='nulla',
+                            match='esse',
                             range=shared.Range(
                                 gt=9518.75,
                                 gte=6216.79,
                                 lt=5757.51,
                                 lte=8630.23,
                             ),
-                            values_count="quia",
+                            values_count='quia',
                         ),
                     ],
                     must_not=[
@@ -590,35 +590,35 @@ req = operations.RecommendBatchPointsRequest(
                                     lon=3984.34,
                                 ),
                             ),
-                            geo_radius="quae",
-                            key="earum",
+                            geo_radius='quae',
+                            key='earum',
                             match=shared.MatchText(
-                                text="eius",
+                                text='eius',
                             ),
-                            range="illum",
-                            values_count="accusantium",
+                            range='illum',
+                            values_count='accusantium',
                         ),
                         shared.IsEmptyCondition(
                             is_empty=shared.PayloadField(
-                                key="sapiente",
+                                key='sapiente',
                             ),
                         ),
                     ],
                     should=[
                         shared.IsEmptyCondition(
                             is_empty=shared.PayloadField(
-                                key="reprehenderit",
+                                key='reprehenderit',
                             ),
                         ),
                     ],
                 ),
                 limit=356707,
                 lookup_from=shared.LookupLocation(
-                    collection="aut",
-                    vector="voluptatum",
+                    collection='aut',
+                    vector='voluptatum',
                 ),
                 negative=[
-                    "68ea19f1-d170-4513-b9d0-8086a1840394",
+                    '68ea19f1-d170-4513-b9d0-8086a1840394',
                 ],
                 offset=771089,
                 params=shared.SearchParams(
@@ -631,23 +631,23 @@ req = operations.RecommendBatchPointsRequest(
                 ),
                 positive=[
                     981640,
-                    "3f5f0642-dac7-4af5-95cc-413aa63aae8d",
+                    '3f5f0642-dac7-4af5-95cc-413aa63aae8d',
                 ],
                 score_threshold=4240.89,
-                using="quos",
+                using='quos',
                 with_payload=False,
-                with_vector="facilis",
+                with_vector='facilis',
             ),
             shared.RecommendRequest(
-                filter="commodi",
+                filter='commodi',
                 limit=447144,
                 lookup_from=shared.LookupLocation(
-                    collection="reiciendis",
-                    vector="assumenda",
+                    collection='reiciendis',
+                    vector='assumenda',
                 ),
                 negative=[
-                    "60b375ed-4f6f-4bee-81f3-3317fe35b60e",
-                    "1ea42655-5ba3-4c28-b44e-d53b88f3a8d8",
+                    '60b375ed-4f6f-4bee-81f3-3317fe35b60e',
+                    '1ea42655-5ba3-4c28-b44e-d53b88f3a8d8',
                 ],
                 offset=940210,
                 params=shared.SearchParams(
@@ -661,26 +661,26 @@ req = operations.RecommendBatchPointsRequest(
                 positive=[
                     967966,
                     994401,
-                    "7b194a27-6b26-4916-be1f-08f4294e3698",
+                    '7b194a27-6b26-4916-be1f-08f4294e3698',
                 ],
                 score_threshold=9757.52,
-                using="tempora",
+                using='tempora',
                 with_payload=shared.PayloadSelectorInclude(
                     include=[
-                        "non",
+                        'non',
                     ],
                 ),
-                with_vector="praesentium",
+                with_vector='praesentium',
             ),
             shared.RecommendRequest(
-                filter="quaerat",
+                filter='quaerat',
                 limit=277773,
                 lookup_from=shared.LookupLocation(
-                    collection="debitis",
-                    vector="rem",
+                    collection='debitis',
+                    vector='rem',
                 ),
                 negative=[
-                    "a55efd20-e457-4e18-98b6-a89fbe3a5aa8",
+                    'a55efd20-e457-4e18-98b6-a89fbe3a5aa8',
                 ],
                 offset=879235,
                 params=shared.SearchParams(
@@ -692,23 +692,23 @@ req = operations.RecommendBatchPointsRequest(
                     ),
                 ),
                 positive=[
-                    "0ab40750-88e5-4186-a065-e904f3b1194b",
-                    "abf603a7-9f9d-4fe0-ab7d-a8a50ce187f8",
+                    '0ab40750-88e5-4186-a065-e904f3b1194b',
+                    'abf603a7-9f9d-4fe0-ab7d-a8a50ce187f8',
                 ],
                 score_threshold=3831.03,
-                using="maxime",
+                using='maxime',
                 with_payload=[
-                    "assumenda",
+                    'assumenda',
                 ],
                 with_vector=[
-                    "officiis",
-                    "officiis",
-                    "accusamus",
+                    'officiis',
+                    'officiis',
+                    'accusamus',
                 ],
             ),
         ],
     ),
-    collection_name="natus",
+    collection_name='natus',
     consistency=133461,
 )
 
@@ -737,13 +737,13 @@ req = operations.RecommendPointsRequest(
             must=[
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="at",
+                        key='at',
                     ),
                 ),
                 shared.HasIDCondition(
                     has_id=[
                         922348,
-                        "81ead4f0-e101-4256-bf94-e29e973e922a",
+                        '81ead4f0-e101-4256-bf94-e29e973e922a',
                         440264,
                     ],
                 ),
@@ -760,34 +760,34 @@ req = operations.RecommendPointsRequest(
             should=[
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="ipsa",
+                        key='ipsa',
                     ),
                 ),
             ],
         ),
         limit=517612,
         lookup_from=shared.LookupLocation(
-            collection="molestiae",
-            vector="eveniet",
+            collection='molestiae',
+            vector='eveniet',
         ),
         negative=[
-            "6e3ab884-5f05-497a-a0ff-2a54a31e9476",
+            '6e3ab884-5f05-497a-a0ff-2a54a31e9476',
         ],
         offset=284000,
-        params="adipisci",
+        params='adipisci',
         positive=[
-            "65e7956f-9251-4a5a-9da6-60ff57bfaad4",
-            "9efc1b45-12c1-4032-a48d-c2f615199ebf",
-            "0e9fe6c6-32ca-43ae-9011-7996312fde04",
+            '65e7956f-9251-4a5a-9da6-60ff57bfaad4',
+            '9efc1b45-12c1-4032-a48d-c2f615199ebf',
+            '0e9fe6c6-32ca-43ae-9011-7996312fde04',
             473190,
         ],
         score_threshold=1158.34,
-        using="esse",
-        with_payload="maiores",
-        with_vector="vel",
+        using='esse',
+        with_payload='maiores',
+        with_vector='vel',
     ),
-    collection_name="architecto",
-    consistency="majority",
+    collection_name='architecto',
+    consistency=shared.ReadConsistencyTypeEnum.MAJORITY,
 )
 
 res = s.points.recommend_points(req)
@@ -815,18 +815,18 @@ req = operations.ScrollPointsRequest(
             must=[
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="esse",
+                        key='esse',
                     ),
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="consectetur",
+                        key='consectetur',
                     ),
                 ),
             ],
             must_not=[
                 shared.FieldCondition(
-                    geo_bounding_box="sunt",
+                    geo_bounding_box='sunt',
                     geo_radius=shared.GeoRadius(
                         center=shared.GeoPoint(
                             lat=8567.56,
@@ -834,9 +834,9 @@ req = operations.ScrollPointsRequest(
                         ),
                         radius=3996.67,
                     ),
-                    key="officia",
+                    key='officia',
                     match=shared.MatchText(
-                        text="perferendis",
+                        text='perferendis',
                     ),
                     range=shared.Range(
                         gt=3747.53,
@@ -844,7 +844,7 @@ req = operations.ScrollPointsRequest(
                         lt=6616.07,
                         lte=700.42,
                     ),
-                    values_count="possimus",
+                    values_count='possimus',
                 ),
                 shared.Filter(),
             ],
@@ -853,32 +853,32 @@ req = operations.ScrollPointsRequest(
                     has_id=[
                         536923,
                         110477,
-                        "6c645b08-b618-491b-aa0f-e1ade008e6f8",
+                        '6c645b08-b618-491b-aa0f-e1ade008e6f8',
                     ],
                 ),
                 shared.HasIDCondition(
                     has_id=[
-                        "350d8cdb-5a34-4181-8301-0421813d5208",
-                        "ce7e253b-6684-451c-ac6e-205e16deab3f",
+                        '350d8cdb-5a34-4181-8301-0421813d5208',
+                        'ce7e253b-6684-451c-ac6e-205e16deab3f',
                     ],
                 ),
                 shared.Filter(),
             ],
         ),
         limit=759283,
-        offset="nemo",
+        offset='nemo',
         with_payload=[
-            "voluptas",
-            "numquam",
-            "nemo",
+            'voluptas',
+            'numquam',
+            'nemo',
         ],
         with_vector=[
-            "aspernatur",
-            "ducimus",
+            'aspernatur',
+            'ducimus',
         ],
     ),
-    collection_name="nesciunt",
-    consistency="quorum",
+    collection_name='nesciunt',
+    consistency=shared.ReadConsistencyTypeEnum.QUORUM,
 )
 
 res = s.points.scroll_points(req)
@@ -918,10 +918,10 @@ req = operations.SearchBatchPointsRequest(
                                     lon=5854.32,
                                 ),
                             ),
-                            geo_radius="soluta",
-                            key="alias",
-                            match="eos",
-                            range="iste",
+                            geo_radius='soluta',
+                            key='alias',
+                            match='eos',
+                            range='iste',
                             values_count=shared.ValuesCount(
                                 gt=81369,
                                 gte=686362,
@@ -931,8 +931,8 @@ req = operations.SearchBatchPointsRequest(
                         ),
                         shared.HasIDCondition(
                             has_id=[
-                                "58c4d86e-68e4-4be0-9601-3f59da757a59",
-                                "cfef66ef-1caa-4338-bc2b-eb477373c8d7",
+                                '58c4d86e-68e4-4be0-9601-3f59da757a59',
+                                'cfef66ef-1caa-4338-bc2b-eb477373c8d7',
                                 974990,
                             ],
                         ),
@@ -940,11 +940,11 @@ req = operations.SearchBatchPointsRequest(
                     must_not=[
                         shared.IsEmptyCondition(
                             is_empty=shared.PayloadField(
-                                key="quibusdam",
+                                key='quibusdam',
                             ),
                         ),
                         shared.FieldCondition(
-                            geo_bounding_box="libero",
+                            geo_bounding_box='libero',
                             geo_radius=shared.GeoRadius(
                                 center=shared.GeoPoint(
                                     lat=9754.25,
@@ -952,9 +952,9 @@ req = operations.SearchBatchPointsRequest(
                                 ),
                                 radius=7820.9,
                             ),
-                            key="aliquam",
+                            key='aliquam',
                             match=shared.MatchValue(
-                                value="vel",
+                                value='vel',
                             ),
                             range=shared.Range(
                                 gt=1076.17,
@@ -975,7 +975,7 @@ req = operations.SearchBatchPointsRequest(
                         shared.HasIDCondition(
                             has_id=[
                                 391797,
-                                "3a437000-ae6b-46bc-9b8f-759eac55a974",
+                                '3a437000-ae6b-46bc-9b8f-759eac55a974',
                                 874400,
                                 112427,
                             ],
@@ -998,9 +998,9 @@ req = operations.SearchBatchPointsRequest(
                                 ),
                                 radius=5269.07,
                             ),
-                            key="dolorum",
+                            key='dolorum',
                             match=shared.MatchValue(
-                                value="magni",
+                                value='magni',
                             ),
                             range=shared.Range(
                                 gt=644.35,
@@ -1030,7 +1030,7 @@ req = operations.SearchBatchPointsRequest(
                 ),
                 score_threshold=6057.12,
                 vector=shared.NamedVector(
-                    name="Alberta Rempel",
+                    name='Alberta Rempel',
                     vector=[
                         8119.39,
                         257.56,
@@ -1039,24 +1039,24 @@ req = operations.SearchBatchPointsRequest(
                 ),
                 with_payload=shared.PayloadSelectorInclude(
                     include=[
-                        "totam",
+                        'totam',
                     ],
                 ),
                 with_vector=[
-                    "voluptatem",
-                    "autem",
-                    "esse",
+                    'voluptatem',
+                    'autem',
+                    'esse',
                 ],
             ),
             shared.SearchRequest(
                 filter=shared.Filter(
                     must=[
                         shared.FieldCondition(
-                            geo_bounding_box="facere",
-                            geo_radius="molestiae",
-                            key="provident",
-                            match="necessitatibus",
-                            range="sint",
+                            geo_bounding_box='facere',
+                            geo_radius='molestiae',
+                            key='provident',
+                            match='necessitatibus',
+                            range='sint',
                             values_count=shared.ValuesCount(
                                 gt=421819,
                                 gte=373511,
@@ -1066,16 +1066,16 @@ req = operations.SearchBatchPointsRequest(
                         ),
                         shared.IsEmptyCondition(
                             is_empty=shared.PayloadField(
-                                key="officiis",
+                                key='officiis',
                             ),
                         ),
                         shared.Filter(),
                         shared.HasIDCondition(
                             has_id=[
                                 156653,
-                                "ae0be2d7-8225-49e3-aa4b-5197f92443da",
+                                'ae0be2d7-8225-49e3-aa4b-5197f92443da',
                                 760744,
-                                "52b895c5-37c6-4454-afb0-b34896c3ca5a",
+                                '52b895c5-37c6-4454-afb0-b34896c3ca5a',
                             ],
                         ),
                     ],
@@ -1084,13 +1084,13 @@ req = operations.SearchBatchPointsRequest(
                         shared.HasIDCondition(
                             has_id=[
                                 997437,
-                                "57075779-2917-47de-ac64-6ecb573409e3",
-                                "b1e5a2b1-2eb0-47f1-96db-99545fc95fa8",
-                                "970e189d-bb30-4fcb-b3ea-055b197cd44e",
+                                '57075779-2917-47de-ac64-6ecb573409e3',
+                                'b1e5a2b1-2eb0-47f1-96db-99545fc95fa8',
+                                '970e189d-bb30-4fcb-b3ea-055b197cd44e',
                             ],
                         ),
                         shared.FieldCondition(
-                            geo_bounding_box="veniam",
+                            geo_bounding_box='veniam',
                             geo_radius=shared.GeoRadius(
                                 center=shared.GeoPoint(
                                     lat=8138.8,
@@ -1098,9 +1098,9 @@ req = operations.SearchBatchPointsRequest(
                                 ),
                                 radius=1403.84,
                             ),
-                            key="pariatur",
+                            key='pariatur',
                             match=shared.MatchText(
-                                text="ab",
+                                text='ab',
                             ),
                             range=shared.Range(
                                 gt=7057.1,
@@ -1117,7 +1117,7 @@ req = operations.SearchBatchPointsRequest(
                         ),
                         shared.IsEmptyCondition(
                             is_empty=shared.PayloadField(
-                                key="libero",
+                                key='libero',
                             ),
                         ),
                     ],
@@ -1130,14 +1130,14 @@ req = operations.SearchBatchPointsRequest(
                         ),
                         shared.Filter(),
                         shared.FieldCondition(
-                            geo_bounding_box="labore",
-                            geo_radius="eos",
-                            key="reprehenderit",
+                            geo_bounding_box='labore',
+                            geo_radius='eos',
+                            key='reprehenderit',
                             match=shared.MatchValue(
                                 value=664965,
                             ),
-                            range="eligendi",
-                            values_count="unde",
+                            range='eligendi',
+                            values_count='unde',
                         ),
                     ],
                 ),
@@ -1146,7 +1146,7 @@ req = operations.SearchBatchPointsRequest(
                 params=shared.SearchParams(
                     exact=False,
                     hnsw_ef=118041,
-                    quantization="porro",
+                    quantization='porro',
                 ),
                 score_threshold=1114.96,
                 vector=[
@@ -1154,12 +1154,12 @@ req = operations.SearchBatchPointsRequest(
                     3223.33,
                 ],
                 with_payload=False,
-                with_vector="iusto",
+                with_vector='iusto',
             ),
         ],
     ),
-    collection_name="dignissimos",
-    consistency="majority",
+    collection_name='dignissimos',
+    consistency=shared.ReadConsistencyTypeEnum.MAJORITY,
 )
 
 res = s.points.search_batch_points(req)
@@ -1191,7 +1191,7 @@ req = operations.SearchPointsRequest(
             must_not=[
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="eos",
+                        key='eos',
                     ),
                 ),
                 shared.Filter(),
@@ -1200,7 +1200,7 @@ req = operations.SearchPointsRequest(
             should=[
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="nemo",
+                        key='nemo',
                     ),
                 ),
                 shared.Filter(),
@@ -1218,22 +1218,22 @@ req = operations.SearchPointsRequest(
         ),
         score_threshold=2902.48,
         vector=shared.NamedVector(
-            name="Alexandra McLaughlin",
+            name='Alexandra McLaughlin',
             vector=[
                 8052.64,
             ],
         ),
         with_payload=shared.PayloadSelectorExclude(
             exclude=[
-                "provident",
-                "repudiandae",
-                "rerum",
+                'provident',
+                'repudiandae',
+                'rerum',
             ],
         ),
         with_vector=False,
     ),
-    collection_name="vero",
-    consistency="all",
+    collection_name='vero',
+    consistency=shared.ReadConsistencyTypeEnum.ALL,
 )
 
 res = s.points.search_points(req)
@@ -1261,7 +1261,7 @@ req = operations.SetPayloadRequest(
             must=[
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="impedit",
+                        key='impedit',
                     ),
                 ),
             ],
@@ -1277,10 +1277,10 @@ req = operations.SetPayloadRequest(
                             lon=8493.2,
                         ),
                     ),
-                    geo_radius="quidem",
-                    key="cum",
+                    geo_radius='quidem',
+                    key='cum',
                     match=shared.MatchValue(
-                        value="laudantium",
+                        value='laudantium',
                     ),
                     range=shared.Range(
                         gt=9384.12,
@@ -1288,34 +1288,34 @@ req = operations.SetPayloadRequest(
                         lt=2286.46,
                         lte=5879.67,
                     ),
-                    values_count="necessitatibus",
+                    values_count='necessitatibus',
                 ),
                 shared.IsNullCondition(
                     is_null=shared.PayloadField(
-                        key="repudiandae",
+                        key='repudiandae',
                     ),
                 ),
             ],
             should=[
                 shared.IsEmptyCondition(
                     is_empty=shared.PayloadField(
-                        key="molestiae",
+                        key='molestiae',
                     ),
                 ),
             ],
         ),
         payload={
-            "facilis": "corrupti",
-            "aperiam": "sint",
-            "accusamus": "eos",
-            "totam": "dicta",
+            "facilis": 'corrupti',
+            "aperiam": 'sint',
+            "accusamus": 'eos',
+            "totam": 'dicta',
         },
         points=[
             224413,
         ],
     ),
-    collection_name="sunt",
-    ordering="strong",
+    collection_name='sunt',
+    ordering=shared.WriteOrderingEnum.STRONG,
     wait=False,
 )
 
@@ -1342,16 +1342,16 @@ req = operations.UpsertPointsRequest(
     request_body=shared.PointsBatch(
         batch=shared.Batch(
             ids=[
-                "1d4c700b-607f-43c9-bc73-b9da3f2ceda7",
-                "23f22574-11fa-4f4b-b544-e472e802857a",
+                '1d4c700b-607f-43c9-bc73-b9da3f2ceda7',
+                '23f22574-11fa-4f4b-b544-e472e802857a',
                 727544,
             ],
             payloads=[
                 {
-                    "eum": "nesciunt",
-                    "mollitia": "dignissimos",
+                    "eum": 'nesciunt',
+                    "mollitia": 'dignissimos',
                 },
-                "nostrum",
+                'nostrum',
             ],
             vectors=[
                 [
@@ -1369,8 +1369,8 @@ req = operations.UpsertPointsRequest(
             ],
         ),
     ),
-    collection_name="possimus",
-    ordering="medium",
+    collection_name='possimus',
+    ordering=shared.WriteOrderingEnum.MEDIUM,
     wait=False,
 )
 

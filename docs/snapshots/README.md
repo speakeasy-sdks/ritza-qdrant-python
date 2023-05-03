@@ -54,7 +54,7 @@ s = sdk.SDK()
 
 
 req = operations.CreateSnapshotRequest(
-    collection_name="nesciunt",
+    collection_name='nesciunt',
     wait=False,
 )
 
@@ -78,7 +78,7 @@ s = sdk.SDK()
 
 
 req = operations.DeleteFullSnapshotRequest(
-    snapshot_name="quaerat",
+    snapshot_name='quaerat',
     wait=False,
 )
 
@@ -102,8 +102,8 @@ s = sdk.SDK()
 
 
 req = operations.DeleteSnapshotRequest(
-    collection_name="itaque",
-    snapshot_name="minus",
+    collection_name='itaque',
+    snapshot_name='minus',
     wait=False,
 )
 
@@ -127,7 +127,7 @@ s = sdk.SDK()
 
 
 req = operations.GetFullSnapshotRequest(
-    snapshot_name="sunt",
+    snapshot_name='sunt',
 )
 
 res = s.snapshots.get_full_snapshot(req)
@@ -150,8 +150,8 @@ s = sdk.SDK()
 
 
 req = operations.GetSnapshotRequest(
-    collection_name="distinctio",
-    snapshot_name="iusto",
+    collection_name='distinctio',
+    snapshot_name='iusto',
 )
 
 res = s.snapshots.get_snapshot(req)
@@ -193,7 +193,7 @@ s = sdk.SDK()
 
 
 req = operations.ListSnapshotsRequest(
-    collection_name="quas",
+    collection_name='quas',
 )
 
 res = s.snapshots.list_snapshots(req)
@@ -217,10 +217,10 @@ s = sdk.SDK()
 
 req = operations.RecoverFromSnapshotRequest(
     snapshot_recover=shared.SnapshotRecover(
-        location="http://rotten-cuff-link.info",
-        priority="alias",
+        location='http://rotten-cuff-link.info',
+        priority='alias',
     ),
-    collection_name="rem",
+    collection_name='rem',
     wait=False,
 )
 
@@ -246,12 +246,12 @@ s = sdk.SDK()
 req = operations.RecoverFromUploadedSnapshotRequest(
     request_body=operations.RecoverFromUploadedSnapshotRequestBody(
         snapshot=operations.RecoverFromUploadedSnapshotRequestBodySnapshot(
-            content="aut".encode(),
-            snapshot="quos",
+            content='aut'.encode(),
+            snapshot='quos',
         ),
     ),
-    collection_name="laudantium",
-    priority="replica",
+    collection_name='laudantium',
+    priority=shared.SnapshotPriorityEnum.REPLICA,
     wait=False,
 )
 

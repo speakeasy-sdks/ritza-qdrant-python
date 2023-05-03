@@ -29,3 +29,9 @@ Based on:
 Based on:
 - OpenAPI Doc master https://prod.speakeasyapi.dev/v1/apis/qdrant/version/v1.0.0/schema/download
 - Speakeasy CLI 1.26.5 (2.23.6) https://github.com/speakeasy-api/speakeasy
+
+## 2023-05-03 00:49:04
+### Changes
+Based on:
+- OpenAPI Doc master https://prod.speakeasyapi.dev/v1/apis/qdrant/version/v1.0.0/schema/download
+- Speakeasy CLI 1.27.0 (2.24.0) https://github.com/speakeasy-api/speakeasy

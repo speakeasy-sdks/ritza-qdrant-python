@@ -45,7 +45,7 @@ s = sdk.SDK()
 
 
 req = operations.CollectionClusterInfoRequest(
-    collection_name="corrupti",
+    collection_name='corrupti',
 )
 
 res = s.cluster.collection_cluster_info(req)
@@ -118,7 +118,7 @@ req = operations.UpdateCollectionClusterRequest(
             to_peer_id=857946,
         ),
     ),
-    collection_name="corrupti",
+    collection_name='corrupti',
     timeout=847252,
 )
 

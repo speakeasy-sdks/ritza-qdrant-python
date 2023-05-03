@@ -67,7 +67,7 @@ s = sdk.SDK()
 
 
 req = shared.LocksOption(
-    error_message="consectetur",
+    error_message='consectetur',
     write=False,
 )
 
