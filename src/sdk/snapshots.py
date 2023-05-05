@@ -22,6 +22,7 @@ class Snapshots:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_full_snapshot(self, request: operations.CreateFullSnapshotRequest) -> operations.CreateFullSnapshotResponse:
         r"""Create storage snapshot
         Create new snapshot of the whole storage
@@ -54,6 +55,7 @@ class Snapshots:
 
         return res
 
+    
     def create_snapshot(self, request: operations.CreateSnapshotRequest) -> operations.CreateSnapshotResponse:
         r"""Create collection snapshot
         Create new snapshot for a collection
@@ -86,6 +88,7 @@ class Snapshots:
 
         return res
 
+    
     def delete_full_snapshot(self, request: operations.DeleteFullSnapshotRequest) -> operations.DeleteFullSnapshotResponse:
         r"""Delete storage snapshot
         Delete snapshot of the whole storage
@@ -118,6 +121,7 @@ class Snapshots:
 
         return res
 
+    
     def delete_snapshot(self, request: operations.DeleteSnapshotRequest) -> operations.DeleteSnapshotResponse:
         r"""Delete collection snapshot
         Delete snapshot for a collection
@@ -150,6 +154,7 @@ class Snapshots:
 
         return res
 
+    
     def get_full_snapshot(self, request: operations.GetFullSnapshotRequest) -> operations.GetFullSnapshotResponse:
         r"""Download storage snapshot
         Download specified snapshot of the whole storage as a file
@@ -176,6 +181,7 @@ class Snapshots:
 
         return res
 
+    
     def get_snapshot(self, request: operations.GetSnapshotRequest) -> operations.GetSnapshotResponse:
         r"""Download collection snapshot
         Download specified snapshot from a collection as a file
@@ -202,6 +208,7 @@ class Snapshots:
 
         return res
 
+    
     def list_full_snapshots(self) -> operations.ListFullSnapshotsResponse:
         r"""List of storage snapshots
         Get list of snapshots of the whole storage
@@ -229,6 +236,7 @@ class Snapshots:
 
         return res
 
+    
     def list_snapshots(self, request: operations.ListSnapshotsRequest) -> operations.ListSnapshotsResponse:
         r"""List collection snapshots
         Get list of snapshots for a collection
@@ -256,6 +264,7 @@ class Snapshots:
 
         return res
 
+    
     def recover_from_snapshot(self, request: operations.RecoverFromSnapshotRequest) -> operations.RecoverFromSnapshotResponse:
         r"""Recover from a snapshot
         Recover local collection data from a snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.
@@ -292,6 +301,7 @@ class Snapshots:
 
         return res
 
+    
     def recover_from_uploaded_snapshot(self, request: operations.RecoverFromUploadedSnapshotRequest) -> operations.RecoverFromUploadedSnapshotResponse:
         r"""Recover from an uploaded snapshot
         Recover local collection data from an uploaded snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.

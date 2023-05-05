@@ -37,7 +37,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.CollectionClusterInfoRequest(
     collection_name='vel',
 )
@@ -59,7 +58,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.CreateCollectionRequest(
     create_collection=shared.CreateCollection(
@@ -121,7 +119,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.CreateFieldIndexRequest(
     create_field_index=shared.CreateFieldIndex(
         field_name='at',
@@ -150,7 +147,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.CreateSnapshotRequest(
     collection_name='quod',
     wait=False,
@@ -174,7 +170,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.DeleteCollectionRequest(
     collection_name='esse',
     timeout=520478,
@@ -197,7 +192,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.DeleteFieldIndexRequest(
     collection_name='porro',
@@ -224,7 +218,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.DeleteSnapshotRequest(
     collection_name='nam',
     snapshot_name='officia',
@@ -249,7 +242,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.GetCollectionRequest(
     collection_name='occaecati',
 )
@@ -271,7 +263,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.GetCollectionAliasesRequest(
     collection_name='fugit',
@@ -333,7 +324,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.GetSnapshotRequest(
     collection_name='deleniti',
     snapshot_name='hic',
@@ -357,7 +347,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.ListSnapshotsRequest(
     collection_name='optio',
 )
@@ -379,7 +368,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.RecoverFromSnapshotRequest(
     snapshot_recover=shared.SnapshotRecover(
@@ -407,7 +395,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.RecoverFromUploadedSnapshotRequest(
     request_body=operations.RecoverFromUploadedSnapshotRequestBody(
@@ -438,7 +425,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.UpdateAliasesRequest(
     change_aliases_operation=shared.ChangeAliasesOperation(
@@ -472,7 +458,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.UpdateCollectionRequest(
     update_collection=shared.UpdateCollection(
         optimizers_config='dolor',
@@ -499,7 +484,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.UpdateCollectionClusterRequest(
     request_body=shared.AbortTransferOperation(

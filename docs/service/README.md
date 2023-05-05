@@ -42,7 +42,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.MetricsRequest(
     anonymize=False,
 )
@@ -64,7 +63,6 @@ import sdk
 from sdk.models import shared
 
 s = sdk.SDK()
-
 
 req = shared.LocksOption(
     error_message='consectetur',
@@ -88,7 +86,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.TelemetryRequest(
     anonymize=False,

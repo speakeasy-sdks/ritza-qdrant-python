@@ -43,7 +43,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.CollectionClusterInfoRequest(
     collection_name='corrupti',
 )
@@ -85,7 +84,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.RemovePeerRequest(
     force=False,
     peer_id=592845,
@@ -108,7 +106,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.UpdateCollectionClusterRequest(
     request_body=shared.AbortTransferOperation(

@@ -22,6 +22,7 @@ class Cluster:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def cluster_status(self) -> operations.ClusterStatusResponse:
         r"""Get cluster status info
         Get information about the current state and composition of the cluster
@@ -49,6 +50,7 @@ class Cluster:
 
         return res
 
+    
     def collection_cluster_info(self, request: operations.CollectionClusterInfoRequest) -> operations.CollectionClusterInfoResponse:
         r"""Collection cluster info
         Get cluster information for a collection
@@ -76,6 +78,7 @@ class Cluster:
 
         return res
 
+    
     def recover_current_peer(self) -> operations.RecoverCurrentPeerResponse:
         r"""Tries to recover current peer Raft state."""
         base_url = self._server_url
@@ -101,6 +104,7 @@ class Cluster:
 
         return res
 
+    
     def remove_peer(self, request: operations.RemovePeerRequest) -> operations.RemovePeerResponse:
         r"""Remove peer from the cluster
         Tries to remove peer from the cluster. Will return an error if peer has shards on it.
@@ -129,6 +133,7 @@ class Cluster:
 
         return res
 
+    
     def update_collection_cluster(self, request: operations.UpdateCollectionClusterRequest) -> operations.UpdateCollectionClusterResponse:
         r"""Update collection cluster setup"""
         base_url = self._server_url

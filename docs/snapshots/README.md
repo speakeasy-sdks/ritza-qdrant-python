@@ -29,7 +29,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.CreateFullSnapshotRequest(
     wait=False,
 )
@@ -51,7 +50,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.CreateSnapshotRequest(
     collection_name='nesciunt',
@@ -76,7 +74,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.DeleteFullSnapshotRequest(
     snapshot_name='quaerat',
     wait=False,
@@ -99,7 +96,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.DeleteSnapshotRequest(
     collection_name='itaque',
@@ -125,7 +121,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.GetFullSnapshotRequest(
     snapshot_name='sunt',
 )
@@ -147,7 +142,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.GetSnapshotRequest(
     collection_name='distinctio',
@@ -191,7 +185,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.ListSnapshotsRequest(
     collection_name='quas',
 )
@@ -213,7 +206,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.RecoverFromSnapshotRequest(
     snapshot_recover=shared.SnapshotRecover(
@@ -241,7 +233,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.RecoverFromUploadedSnapshotRequest(
     request_body=operations.RecoverFromUploadedSnapshotRequestBody(

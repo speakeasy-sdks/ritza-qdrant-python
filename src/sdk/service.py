@@ -22,6 +22,7 @@ class Service:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def get_locks(self) -> operations.GetLocksResponse:
         r"""Get lock options
         Get lock options. If write is locked, all write operations and collection creation are forbidden
@@ -49,6 +50,7 @@ class Service:
 
         return res
 
+    
     def metrics(self, request: operations.MetricsRequest) -> operations.MetricsResponse:
         r"""Collect Prometheus metrics data
         Collect metrics data including app info, collections info, cluster info and statistics
@@ -74,6 +76,7 @@ class Service:
 
         return res
 
+    
     def post_locks(self, request: shared.LocksOption) -> operations.PostLocksResponse:
         r"""Set lock options
         Set lock options. If write is locked, all write operations and collection creation are forbidden. Returns previous lock options
@@ -105,6 +108,7 @@ class Service:
 
         return res
 
+    
     def telemetry(self, request: operations.TelemetryRequest) -> operations.TelemetryResponse:
         r"""Collect telemetry data
         Collect telemetry data including app info, system info, collections info, cluster info, configs and statistics

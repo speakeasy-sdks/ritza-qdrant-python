@@ -22,6 +22,7 @@ class Collections:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def collection_cluster_info(self, request: operations.CollectionClusterInfoRequest) -> operations.CollectionClusterInfoResponse:
         r"""Collection cluster info
         Get cluster information for a collection
@@ -49,6 +50,7 @@ class Collections:
 
         return res
 
+    
     def create_collection(self, request: operations.CreateCollectionRequest) -> operations.CreateCollectionResponse:
         r"""Create collection
         Create new collection with given parameters
@@ -81,6 +83,7 @@ class Collections:
 
         return res
 
+    
     def create_field_index(self, request: operations.CreateFieldIndexRequest) -> operations.CreateFieldIndexResponse:
         r"""Create index for field in collection
         Create index for field in collection
@@ -113,6 +116,7 @@ class Collections:
 
         return res
 
+    
     def create_snapshot(self, request: operations.CreateSnapshotRequest) -> operations.CreateSnapshotResponse:
         r"""Create collection snapshot
         Create new snapshot for a collection
@@ -145,6 +149,7 @@ class Collections:
 
         return res
 
+    
     def delete_collection(self, request: operations.DeleteCollectionRequest) -> operations.DeleteCollectionResponse:
         r"""Delete collection
         Drop collection and all associated data
@@ -173,6 +178,7 @@ class Collections:
 
         return res
 
+    
     def delete_field_index(self, request: operations.DeleteFieldIndexRequest) -> operations.DeleteFieldIndexResponse:
         r"""Delete index for field in collection
         Delete field index for collection
@@ -201,6 +207,7 @@ class Collections:
 
         return res
 
+    
     def delete_snapshot(self, request: operations.DeleteSnapshotRequest) -> operations.DeleteSnapshotResponse:
         r"""Delete collection snapshot
         Delete snapshot for a collection
@@ -233,6 +240,7 @@ class Collections:
 
         return res
 
+    
     def get_collection(self, request: operations.GetCollectionRequest) -> operations.GetCollectionResponse:
         r"""Collection info
         Get detailed information about specified existing collection
@@ -260,6 +268,7 @@ class Collections:
 
         return res
 
+    
     def get_collection_aliases(self, request: operations.GetCollectionAliasesRequest) -> operations.GetCollectionAliasesResponse:
         r"""List aliases for collection
         Get list of all aliases for a collection
@@ -287,6 +296,7 @@ class Collections:
 
         return res
 
+    
     def get_collections(self) -> operations.GetCollectionsResponse:
         r"""List collections
         Get list name of all existing collections
@@ -314,6 +324,7 @@ class Collections:
 
         return res
 
+    
     def get_collections_aliases(self) -> operations.GetCollectionsAliasesResponse:
         r"""List collections aliases
         Get list of all existing collections aliases
@@ -341,6 +352,7 @@ class Collections:
 
         return res
 
+    
     def get_snapshot(self, request: operations.GetSnapshotRequest) -> operations.GetSnapshotResponse:
         r"""Download collection snapshot
         Download specified snapshot from a collection as a file
@@ -367,6 +379,7 @@ class Collections:
 
         return res
 
+    
     def list_snapshots(self, request: operations.ListSnapshotsRequest) -> operations.ListSnapshotsResponse:
         r"""List collection snapshots
         Get list of snapshots for a collection
@@ -394,6 +407,7 @@ class Collections:
 
         return res
 
+    
     def recover_from_snapshot(self, request: operations.RecoverFromSnapshotRequest) -> operations.RecoverFromSnapshotResponse:
         r"""Recover from a snapshot
         Recover local collection data from a snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.
@@ -430,6 +444,7 @@ class Collections:
 
         return res
 
+    
     def recover_from_uploaded_snapshot(self, request: operations.RecoverFromUploadedSnapshotRequest) -> operations.RecoverFromUploadedSnapshotResponse:
         r"""Recover from an uploaded snapshot
         Recover local collection data from an uploaded snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.
@@ -466,6 +481,7 @@ class Collections:
 
         return res
 
+    
     def update_aliases(self, request: operations.UpdateAliasesRequest) -> operations.UpdateAliasesResponse:
         r"""Update aliases of the collections"""
         base_url = self._server_url
@@ -496,6 +512,7 @@ class Collections:
 
         return res
 
+    
     def update_collection(self, request: operations.UpdateCollectionRequest) -> operations.UpdateCollectionResponse:
         r"""Update collection parameters
         Update parameters of the existing collection
@@ -528,6 +545,7 @@ class Collections:
 
         return res
 
+    
     def update_collection_cluster(self, request: operations.UpdateCollectionClusterRequest) -> operations.UpdateCollectionClusterResponse:
         r"""Update collection cluster setup"""
         base_url = self._server_url

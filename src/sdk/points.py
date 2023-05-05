@@ -22,6 +22,7 @@ class Points:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def clear_payload(self, request: operations.ClearPayloadRequest) -> operations.ClearPayloadResponse:
         r"""Clear payload
         Remove all payload for specified points
@@ -54,6 +55,7 @@ class Points:
 
         return res
 
+    
     def count_points(self, request: operations.CountPointsRequest) -> operations.CountPointsResponse:
         r"""Count points
         Count points which matches given filtering condition
@@ -85,6 +87,7 @@ class Points:
 
         return res
 
+    
     def delete_payload(self, request: operations.DeletePayloadRequest) -> operations.DeletePayloadResponse:
         r"""Delete payload
         Delete specified key payload for points
@@ -117,6 +120,7 @@ class Points:
 
         return res
 
+    
     def delete_points(self, request: operations.DeletePointsRequest) -> operations.DeletePointsResponse:
         r"""Delete points
         Delete points
@@ -149,6 +153,7 @@ class Points:
 
         return res
 
+    
     def get_point(self, request: operations.GetPointRequest) -> operations.GetPointResponse:
         r"""Get point
         Retrieve full information of single point by id
@@ -177,6 +182,7 @@ class Points:
 
         return res
 
+    
     def get_points(self, request: operations.GetPointsRequest) -> operations.GetPointsResponse:
         r"""Get points
         Retrieve multiple points by specified IDs
@@ -209,6 +215,7 @@ class Points:
 
         return res
 
+    
     def overwrite_payload(self, request: operations.OverwritePayloadRequest) -> operations.OverwritePayloadResponse:
         r"""Overwrite payload
         Replace full payload of points with new one
@@ -241,6 +248,7 @@ class Points:
 
         return res
 
+    
     def recommend_batch_points(self, request: operations.RecommendBatchPointsRequest) -> operations.RecommendBatchPointsResponse:
         r"""Recommend batch points
         Look for the points which are closer to stored positive examples and at the same time further to negative examples.
@@ -273,6 +281,7 @@ class Points:
 
         return res
 
+    
     def recommend_points(self, request: operations.RecommendPointsRequest) -> operations.RecommendPointsResponse:
         r"""Recommend points
         Look for the points which are closer to stored positive examples and at the same time further to negative examples.
@@ -305,6 +314,7 @@ class Points:
 
         return res
 
+    
     def scroll_points(self, request: operations.ScrollPointsRequest) -> operations.ScrollPointsResponse:
         r"""Scroll points
         Scroll request - paginate over all points which matches given filtering condition
@@ -337,6 +347,7 @@ class Points:
 
         return res
 
+    
     def search_batch_points(self, request: operations.SearchBatchPointsRequest) -> operations.SearchBatchPointsResponse:
         r"""Search batch points
         Retrieve by batch the closest points based on vector similarity and given filtering conditions
@@ -369,6 +380,7 @@ class Points:
 
         return res
 
+    
     def search_points(self, request: operations.SearchPointsRequest) -> operations.SearchPointsResponse:
         r"""Search points
         Retrieve closest points based on vector similarity and given filtering conditions
@@ -401,6 +413,7 @@ class Points:
 
         return res
 
+    
     def set_payload(self, request: operations.SetPayloadRequest) -> operations.SetPayloadResponse:
         r"""Set payload
         Set payload values for points
@@ -433,6 +446,7 @@ class Points:
 
         return res
 
+    
     def upsert_points(self, request: operations.UpsertPointsRequest) -> operations.UpsertPointsResponse:
         r"""Upsert points
         Perform insert + updates on points. If point with given ID already exists - it will be overwritten.

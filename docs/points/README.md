@@ -33,7 +33,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.ClearPayloadRequest(
     request_body=shared.FilterSelector(
         filter=shared.Filter(
@@ -114,7 +113,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.CountPointsRequest(
     count_request=shared.CountRequest(
         exact=False,
@@ -140,7 +138,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.DeletePayloadRequest(
     delete_payload=shared.DeletePayload(
@@ -176,7 +173,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.DeletePointsRequest(
     request_body=shared.FilterSelector(
@@ -307,7 +303,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.GetPointRequest(
     collection_name='sed',
     consistency=730442,
@@ -331,7 +326,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.GetPointsRequest(
     point_request=shared.PointRequest(
@@ -365,7 +359,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.OverwritePayloadRequest(
     set_payload=shared.SetPayload(
@@ -484,7 +477,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.RecommendBatchPointsRequest(
     recommend_request_batch=shared.RecommendRequestBatch(
@@ -730,7 +722,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.RecommendPointsRequest(
     recommend_request=shared.RecommendRequest(
         filter=shared.Filter(
@@ -807,7 +798,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.ScrollPointsRequest(
     scroll_request=shared.ScrollRequest(
@@ -898,7 +888,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.SearchBatchPointsRequest(
     search_request_batch=shared.SearchRequestBatch(
@@ -1180,7 +1169,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.SearchPointsRequest(
     search_request=shared.SearchRequest(
         filter=shared.Filter(
@@ -1253,7 +1241,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.SetPayloadRequest(
     set_payload=shared.SetPayload(
@@ -1336,7 +1323,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.UpsertPointsRequest(
     request_body=shared.PointsBatch(
