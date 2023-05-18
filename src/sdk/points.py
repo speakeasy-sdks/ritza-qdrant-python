@@ -30,12 +30,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ClearPayloadRequest, base_url, '/collections/{collection_name}/points/payload/clear', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.ClearPayloadRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -63,11 +63,11 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.CountPointsRequest, base_url, '/collections/{collection_name}/points/count', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "count_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -95,12 +95,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeletePayloadRequest, base_url, '/collections/{collection_name}/points/payload/delete', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delete_payload", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.DeletePayloadRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -128,12 +128,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeletePointsRequest, base_url, '/collections/{collection_name}/points/delete', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.DeletePointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -161,12 +161,13 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetPointRequest, base_url, '/collections/{collection_name}/points/{id}', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.GetPointRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetPointResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -190,12 +191,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetPointsRequest, base_url, '/collections/{collection_name}/points', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "point_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.GetPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -223,12 +224,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.OverwritePayloadRequest, base_url, '/collections/{collection_name}/points/payload', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "set_payload", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.OverwritePayloadRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -256,12 +257,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RecommendBatchPointsRequest, base_url, '/collections/{collection_name}/points/recommend/batch', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "recommend_request_batch", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecommendBatchPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -289,12 +290,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RecommendPointsRequest, base_url, '/collections/{collection_name}/points/recommend', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "recommend_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecommendPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -322,12 +323,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ScrollPointsRequest, base_url, '/collections/{collection_name}/points/scroll', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "scroll_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.ScrollPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -355,12 +356,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchBatchPointsRequest, base_url, '/collections/{collection_name}/points/search/batch', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "search_request_batch", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.SearchBatchPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -388,12 +389,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchPointsRequest, base_url, '/collections/{collection_name}/points/search', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "search_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.SearchPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -421,12 +422,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SetPayloadRequest, base_url, '/collections/{collection_name}/points/payload', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "set_payload", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.SetPayloadRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -454,12 +455,12 @@ class Points:
         base_url = self._server_url
         
         url = utils.generate_url(operations.UpsertPointsRequest, base_url, '/collections/{collection_name}/points', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.UpsertPointsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

@@ -30,12 +30,13 @@ class Snapshots:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/snapshots'
-        
+        headers = {}
         query_params = utils.get_query_params(operations.CreateFullSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url, params=query_params)
+        http_res = client.request('POST', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateFullSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -63,12 +64,13 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.CreateSnapshotRequest, base_url, '/collections/{collection_name}/snapshots', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.CreateSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url, params=query_params)
+        http_res = client.request('POST', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -96,12 +98,13 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteFullSnapshotRequest, base_url, '/snapshots/{snapshot_name}', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.DeleteFullSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url, params=query_params)
+        http_res = client.request('DELETE', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteFullSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -129,12 +132,13 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/{snapshot_name}', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.DeleteSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url, params=query_params)
+        http_res = client.request('DELETE', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -162,11 +166,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetFullSnapshotRequest, base_url, '/snapshots/{snapshot_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetFullSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -189,11 +194,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/{snapshot_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetSnapshotResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -216,11 +222,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/snapshots'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListFullSnapshotsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -244,11 +251,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ListSnapshotsRequest, base_url, '/collections/{collection_name}/snapshots', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListSnapshotsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -272,12 +280,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RecoverFromSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/recover', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "snapshot_recover", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecoverFromSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -309,12 +317,12 @@ class Snapshots:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RecoverFromUploadedSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/upload', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'multipart')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecoverFromUploadedSnapshotRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

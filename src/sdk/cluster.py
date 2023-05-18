@@ -30,11 +30,12 @@ class Cluster:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/cluster'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ClusterStatusResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -58,11 +59,12 @@ class Cluster:
         base_url = self._server_url
         
         url = utils.generate_url(operations.CollectionClusterInfoRequest, base_url, '/collections/{collection_name}/cluster', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CollectionClusterInfoResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -84,11 +86,12 @@ class Cluster:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/cluster/recover'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RecoverCurrentPeerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -112,12 +115,13 @@ class Cluster:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RemovePeerRequest, base_url, '/cluster/peer/{peer_id}', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.RemovePeerRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('DELETE', url, params=query_params)
+        http_res = client.request('DELETE', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RemovePeerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -139,12 +143,12 @@ class Cluster:
         base_url = self._server_url
         
         url = utils.generate_url(operations.UpdateCollectionClusterRequest, base_url, '/collections/{collection_name}/cluster', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.UpdateCollectionClusterRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
