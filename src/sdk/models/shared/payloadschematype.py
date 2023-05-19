@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class PayloadSchemaTypeEnum(str, Enum):
+class PayloadSchemaType(str, Enum):
     r"""All possible names of payload types"""
     KEYWORD = 'keyword'
     INTEGER = 'integer'

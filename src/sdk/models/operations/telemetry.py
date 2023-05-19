@@ -17,7 +17,7 @@ class TelemetryRequest:
     anonymize: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'anonymize', 'style': 'form', 'explode': True }})
     r"""If true, anonymize result"""
     
-class Telemetry200ApplicationJSONStatusEnum(str, Enum):
+class Telemetry200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -27,7 +27,7 @@ class Telemetry200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_telemetrydata.TelemetryData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[Telemetry200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[Telemetry200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

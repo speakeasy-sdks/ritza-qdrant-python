@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class CollectionStatusEnum(str, Enum):
+class CollectionStatus(str, Enum):
     r"""Current state of the collection. `Green` - all good. `Yellow` - optimization is running, `Red` - some operations failed and was not recovered"""
     GREEN = 'green'
     YELLOW = 'yellow'

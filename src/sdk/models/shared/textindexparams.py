@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import textindextype_enum as shared_textindextype_enum
-from ..shared import tokenizertype_enum as shared_tokenizertype_enum
+from ..shared import textindextype as shared_textindextype
+from ..shared import tokenizertype as shared_tokenizertype
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 from typing import Optional
@@ -14,10 +14,10 @@ from typing import Optional
 class TextIndexParams:
     r"""Payload type with parameters"""
     
-    type: shared_textindextype_enum.TextIndexTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: shared_textindextype.TextIndexType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     lowercase: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lowercase'), 'exclude': lambda f: f is None }})
     r"""If true, lowercase all tokens. Default: true"""
     max_token_len: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_token_len'), 'exclude': lambda f: f is None }})
     min_token_len: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_token_len'), 'exclude': lambda f: f is None }})
-    tokenizer: Optional[shared_tokenizertype_enum.TokenizerTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenizer'), 'exclude': lambda f: f is None }})
+    tokenizer: Optional[shared_tokenizertype.TokenizerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenizer'), 'exclude': lambda f: f is None }})
     

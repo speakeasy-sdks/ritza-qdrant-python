@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import remoteshardtelemetry as shared_remoteshardtelemetry
-from ..shared import replicastate_enum as shared_replicastate_enum
+from ..shared import replicastate as shared_replicastate
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 from typing import Any, Optional
@@ -15,6 +15,6 @@ class ReplicaSetTelemetry:
     
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     remote: list[shared_remoteshardtelemetry.RemoteShardTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('remote') }})
-    replicate_states: dict[str, shared_replicastate_enum.ReplicaStateEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('replicate_states') }})
+    replicate_states: dict[str, shared_replicastate.ReplicaState] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('replicate_states') }})
     local: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('local'), 'exclude': lambda f: f is None }})
     

@@ -18,7 +18,7 @@ from .collectionparamsdiff import *
 from .collectionsaggregatedtelemetry import *
 from .collectionsaliasesresponse import *
 from .collectionsresponse import *
-from .collectionstatus_enum import *
+from .collectionstatus import *
 from .collectionstelemetry import *
 from .collectiontelemetry import *
 from .consensusconfigtelemetry import *
@@ -31,7 +31,7 @@ from .createfieldindex import *
 from .deletealias import *
 from .deletealiasoperation import *
 from .deletepayload import *
-from .distance_enum import *
+from .distance import *
 from .dropreplicaoperation import *
 from .errorresponse import *
 from .fieldcondition import *
@@ -66,7 +66,7 @@ from .p2pconfigtelemetry import *
 from .payloadfield import *
 from .payloadindexinfo import *
 from .payloadindextelemetry import *
-from .payloadschematype_enum import *
+from .payloadschematype import *
 from .payloadselectorexclude import *
 from .payloadselectorinclude import *
 from .peerinfo import *
@@ -78,7 +78,7 @@ from .pointstruct import *
 from .quantizationsearchparams import *
 from .raftinfo import *
 from .range import *
-from .readconsistencytype_enum import *
+from .readconsistencytype import *
 from .recommendrequest import *
 from .recommendrequestbatch import *
 from .record import *
@@ -88,13 +88,13 @@ from .renamealias import *
 from .renamealiasoperation import *
 from .replica import *
 from .replicasettelemetry import *
-from .replicastate_enum import *
+from .replicastate import *
 from .replicateshardoperation import *
 from .requeststelemetry import *
 from .runningenvironmenttelemetry import *
 from .scalarquantization import *
 from .scalarquantizationconfig import *
-from .scalartype_enum import *
+from .scalartype import *
 from .scoredpoint import *
 from .scrollrequest import *
 from .scrollresult import *
@@ -104,20 +104,20 @@ from .searchrequestbatch import *
 from .segmentconfig import *
 from .segmentinfo import *
 from .segmenttelemetry import *
-from .segmenttype_enum import *
+from .segmenttype import *
 from .setpayload import *
 from .shardtransferinfo import *
 from .snapshotdescription import *
-from .snapshotpriority_enum import *
+from .snapshotpriority import *
 from .snapshotrecover import *
-from .staterole_enum import *
+from .staterole import *
 from .telemetrydata import *
 from .textindexparams import *
-from .textindextype_enum import *
-from .tokenizertype_enum import *
+from .textindextype import *
+from .tokenizertype import *
 from .updatecollection import *
 from .updateresult import *
-from .updatestatus_enum import *
+from .updatestatus import *
 from .valuescount import *
 from .vectordataconfig import *
 from .vectorindexsearchestelemetry import *
@@ -125,6 +125,6 @@ from .vectorparams import *
 from .walconfig import *
 from .walconfigdiff import *
 from .webapitelemetry import *
-from .writeordering_enum import *
+from .writeordering import *
 
-__all__ = ["AbortTransferOperation","AliasDescription","AppBuildTelemetry","AppFeaturesTelemetry","Batch","ChangeAliasesOperation","ClusterConfigTelemetry","ClusterStatusTelemetry","ClusterStatusTelemetryConsensusThreadStatus1","ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatusEnum","ClusterStatusTelemetryConsensusThreadStatus2","ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatusEnum","ClusterStatusTelemetryConsensusThreadStatus3","ClusterStatusTelemetryConsensusThreadStatus3ConsensusThreadStatusEnum","ClusterTelemetry","CollectionClusterInfo","CollectionConfig","CollectionDescription","CollectionInfo","CollectionInfoOptimizerStatus1Enum","CollectionInfoOptimizerStatus2","CollectionParams","CollectionParamsDiff","CollectionStatusEnum","CollectionTelemetry","CollectionsAggregatedTelemetry","CollectionsAggregatedTelemetryOptimizersStatus1Enum","CollectionsAggregatedTelemetryOptimizersStatus2","CollectionsAliasesResponse","CollectionsResponse","CollectionsTelemetry","ConsensusConfigTelemetry","CountRequest","CountResult","CreateAlias","CreateAliasOperation","CreateCollection","CreateFieldIndex","DeleteAlias","DeleteAliasOperation","DeletePayload","DistanceEnum","DropReplicaOperation","ErrorResponse","ErrorResponseStatus","FieldCondition","Filter","FilterSelector","GeoBoundingBox","GeoPoint","GeoRadius","GrpcTelemetry","HasIDCondition","HnswConfig","HnswConfigDiff","InitFrom","IsEmptyCondition","IsNullCondition","LocalShardInfo","LocalShardTelemetry","LocksOption","LookupLocation","MatchAny","MatchText","MatchValue","MessageSendErrors","MoveShard","MoveShardOperation","NamedVector","OperationDurationStatistics","OptimizerTelemetry","OptimizerTelemetryStatus1Enum","OptimizerTelemetryStatus2","OptimizersConfig","OptimizersConfigDiff","P2pConfigTelemetry","PayloadField","PayloadIndexInfo","PayloadIndexTelemetry","PayloadSchemaTypeEnum","PayloadSelectorExclude","PayloadSelectorInclude","PeerInfo","PointIdsList","PointRequest","PointStruct","PointsBatch","PointsList","QuantizationSearchParams","RaftInfo","Range","ReadConsistencyTypeEnum","RecommendRequest","RecommendRequestBatch","Record","RemoteShardInfo","RemoteShardTelemetry","RenameAlias","RenameAliasOperation","Replica","ReplicaSetTelemetry","ReplicaStateEnum","ReplicateShardOperation","RequestsTelemetry","RunningEnvironmentTelemetry","ScalarQuantization","ScalarQuantizationConfig","ScalarTypeEnum","ScoredPoint","ScrollRequest","ScrollResult","SearchParams","SearchRequest","SearchRequestBatch","SegmentConfig","SegmentConfigIndex1","SegmentConfigIndex1TypeEnum","SegmentConfigIndex2","SegmentConfigIndex2TypeEnum","SegmentConfigPayloadStorageType1","SegmentConfigPayloadStorageType1TypeEnum","SegmentConfigPayloadStorageType2","SegmentConfigPayloadStorageType2TypeEnum","SegmentConfigStorageType1","SegmentConfigStorageType1TypeEnum","SegmentConfigStorageType2","SegmentConfigStorageType2TypeEnum","SegmentInfo","SegmentTelemetry","SegmentTypeEnum","SetPayload","ShardTransferInfo","SnapshotDescription","SnapshotPriorityEnum","SnapshotRecover","StateRoleEnum","TelemetryData","TextIndexParams","TextIndexTypeEnum","TokenizerTypeEnum","UpdateCollection","UpdateResult","UpdateStatusEnum","ValuesCount","VectorDataConfig","VectorIndexSearchesTelemetry","VectorParams","WalConfig","WalConfigDiff","WebAPITelemetry","WriteOrderingEnum"]
+__all__ = ["AbortTransferOperation","AliasDescription","AppBuildTelemetry","AppFeaturesTelemetry","Batch","ChangeAliasesOperation","ClusterConfigTelemetry","ClusterStatusTelemetry","ClusterStatusTelemetryConsensusThreadStatus1","ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatus","ClusterStatusTelemetryConsensusThreadStatus2","ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatus","ClusterStatusTelemetryConsensusThreadStatus3","ClusterStatusTelemetryConsensusThreadStatus3ConsensusThreadStatus","ClusterTelemetry","CollectionClusterInfo","CollectionConfig","CollectionDescription","CollectionInfo","CollectionInfoOptimizerStatus1","CollectionInfoOptimizerStatus2","CollectionParams","CollectionParamsDiff","CollectionStatus","CollectionTelemetry","CollectionsAggregatedTelemetry","CollectionsAggregatedTelemetryOptimizersStatus1","CollectionsAggregatedTelemetryOptimizersStatus2","CollectionsAliasesResponse","CollectionsResponse","CollectionsTelemetry","ConsensusConfigTelemetry","CountRequest","CountResult","CreateAlias","CreateAliasOperation","CreateCollection","CreateFieldIndex","DeleteAlias","DeleteAliasOperation","DeletePayload","Distance","DropReplicaOperation","ErrorResponse","ErrorResponseStatus","FieldCondition","Filter","FilterSelector","GeoBoundingBox","GeoPoint","GeoRadius","GrpcTelemetry","HasIDCondition","HnswConfig","HnswConfigDiff","InitFrom","IsEmptyCondition","IsNullCondition","LocalShardInfo","LocalShardTelemetry","LocksOption","LookupLocation","MatchAny","MatchText","MatchValue","MessageSendErrors","MoveShard","MoveShardOperation","NamedVector","OperationDurationStatistics","OptimizerTelemetry","OptimizerTelemetryStatus1","OptimizerTelemetryStatus2","OptimizersConfig","OptimizersConfigDiff","P2pConfigTelemetry","PayloadField","PayloadIndexInfo","PayloadIndexTelemetry","PayloadSchemaType","PayloadSelectorExclude","PayloadSelectorInclude","PeerInfo","PointIdsList","PointRequest","PointStruct","PointsBatch","PointsList","QuantizationSearchParams","RaftInfo","Range","ReadConsistencyType","RecommendRequest","RecommendRequestBatch","Record","RemoteShardInfo","RemoteShardTelemetry","RenameAlias","RenameAliasOperation","Replica","ReplicaSetTelemetry","ReplicaState","ReplicateShardOperation","RequestsTelemetry","RunningEnvironmentTelemetry","ScalarQuantization","ScalarQuantizationConfig","ScalarType","ScoredPoint","ScrollRequest","ScrollResult","SearchParams","SearchRequest","SearchRequestBatch","SegmentConfig","SegmentConfigIndex1","SegmentConfigIndex1Type","SegmentConfigIndex2","SegmentConfigIndex2Type","SegmentConfigPayloadStorageType1","SegmentConfigPayloadStorageType1Type","SegmentConfigPayloadStorageType2","SegmentConfigPayloadStorageType2Type","SegmentConfigStorageType1","SegmentConfigStorageType1Type","SegmentConfigStorageType2","SegmentConfigStorageType2Type","SegmentInfo","SegmentTelemetry","SegmentType","SetPayload","ShardTransferInfo","SnapshotDescription","SnapshotPriority","SnapshotRecover","StateRole","TelemetryData","TextIndexParams","TextIndexType","TokenizerType","UpdateCollection","UpdateResult","UpdateStatus","ValuesCount","VectorDataConfig","VectorIndexSearchesTelemetry","VectorParams","WalConfig","WalConfigDiff","WebAPITelemetry","WriteOrdering"]

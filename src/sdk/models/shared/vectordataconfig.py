@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import distance_enum as shared_distance_enum
+from ..shared import distance as shared_distance
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 from typing import Any, Optional
@@ -13,7 +13,7 @@ from typing import Any, Optional
 class VectorDataConfig:
     r"""Config of single vector data storage"""
     
-    distance: shared_distance_enum.DistanceEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distance') }})
+    distance: shared_distance.Distance = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distance') }})
     r"""Type of internal tags, build from payload Distance function types used to compare vectors"""
     size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('size') }})
     r"""Size of a vectors used"""

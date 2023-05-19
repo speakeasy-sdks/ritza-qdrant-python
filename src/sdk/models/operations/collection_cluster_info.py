@@ -17,7 +17,7 @@ class CollectionClusterInfoRequest:
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve the cluster info for"""
     
-class CollectionClusterInfo200ApplicationJSONStatusEnum(str, Enum):
+class CollectionClusterInfo200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -28,7 +28,7 @@ class CollectionClusterInfo200ApplicationJSON:
     
     result: Optional[shared_collectionclusterinfo.CollectionClusterInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Current clustering distribution for the collection"""
-    status: Optional[CollectionClusterInfo200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[CollectionClusterInfo200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

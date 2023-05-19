@@ -22,7 +22,7 @@ class GetPointsRequest:
     point_request: Optional[shared_pointrequest.PointRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""List of points to retrieve"""
     
-class GetPoints200ApplicationJSONStatusEnum(str, Enum):
+class GetPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -32,7 +32,7 @@ class GetPoints200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[list[shared_record.Record]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[GetPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[GetPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

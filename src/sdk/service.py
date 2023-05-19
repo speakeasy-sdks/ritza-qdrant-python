@@ -31,6 +31,7 @@ class Service:
         
         url = base_url.removesuffix('/') + '/locks'
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -61,6 +62,7 @@ class Service:
         url = base_url.removesuffix('/') + '/metrics'
         headers = {}
         query_params = utils.get_query_params(operations.MetricsRequest, request)
+        headers['Accept'] = 'text/plain'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -90,6 +92,7 @@ class Service:
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -120,6 +123,7 @@ class Service:
         url = base_url.removesuffix('/') + '/telemetry'
         headers = {}
         query_params = utils.get_query_params(operations.TelemetryRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

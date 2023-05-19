@@ -3,5 +3,5 @@
 from __future__ import annotations
 from enum import Enum
 
-class TextIndexTypeEnum(str, Enum):
-    TEXT = 'text'
+class ScalarType(str, Enum):
+    INT8 = 'int8'

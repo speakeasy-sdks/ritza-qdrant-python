@@ -21,7 +21,7 @@ class UpdateAliasesRequest:
     If timeout is reached - request will return with service error.
     """
     
-class UpdateAliases200ApplicationJSONStatusEnum(str, Enum):
+class UpdateAliases200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -31,7 +31,7 @@ class UpdateAliases200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[UpdateAliases200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[UpdateAliases200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

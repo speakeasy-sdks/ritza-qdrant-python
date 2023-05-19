@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import payloadindexinfo as shared_payloadindexinfo
-from ..shared import segmenttype_enum as shared_segmenttype_enum
+from ..shared import segmenttype as shared_segmenttype
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 
@@ -20,6 +20,6 @@ class SegmentInfo:
     num_points: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_points') }})
     num_vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_vectors') }})
     ram_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ram_usage_bytes') }})
-    segment_type: shared_segmenttype_enum.SegmentTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segment_type') }})
+    segment_type: shared_segmenttype.SegmentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segment_type') }})
     r"""Type of segment"""
     

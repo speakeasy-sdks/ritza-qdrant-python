@@ -32,6 +32,7 @@ class Snapshots:
         url = base_url.removesuffix('/') + '/snapshots'
         headers = {}
         query_params = utils.get_query_params(operations.CreateFullSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -66,6 +67,7 @@ class Snapshots:
         url = utils.generate_url(operations.CreateSnapshotRequest, base_url, '/collections/{collection_name}/snapshots', request)
         headers = {}
         query_params = utils.get_query_params(operations.CreateSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -100,6 +102,7 @@ class Snapshots:
         url = utils.generate_url(operations.DeleteFullSnapshotRequest, base_url, '/snapshots/{snapshot_name}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteFullSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -134,6 +137,7 @@ class Snapshots:
         url = utils.generate_url(operations.DeleteSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/{snapshot_name}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -167,6 +171,7 @@ class Snapshots:
         
         url = utils.generate_url(operations.GetFullSnapshotRequest, base_url, '/snapshots/{snapshot_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/octet-stream;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -195,6 +200,7 @@ class Snapshots:
         
         url = utils.generate_url(operations.GetSnapshotRequest, base_url, '/collections/{collection_name}/snapshots/{snapshot_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/octet-stream;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -223,6 +229,7 @@ class Snapshots:
         
         url = base_url.removesuffix('/') + '/snapshots'
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -252,6 +259,7 @@ class Snapshots:
         
         url = utils.generate_url(operations.ListSnapshotsRequest, base_url, '/collections/{collection_name}/snapshots', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -285,6 +293,7 @@ class Snapshots:
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecoverFromSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -322,6 +331,7 @@ class Snapshots:
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.RecoverFromUploadedSnapshotRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

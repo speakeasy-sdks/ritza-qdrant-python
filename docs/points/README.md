@@ -91,7 +91,7 @@ req = operations.ClearPayloadRequest(
         ),
     ),
     collection_name='aliquid',
-    ordering=shared.WriteOrderingEnum.MEDIUM,
+    ordering=shared.WriteOrdering.MEDIUM,
     wait=False,
 )
 
@@ -152,7 +152,7 @@ req = operations.DeletePayloadRequest(
         ],
     ),
     collection_name='delectus',
-    ordering=shared.WriteOrderingEnum.STRONG,
+    ordering=shared.WriteOrdering.STRONG,
     wait=False,
 )
 
@@ -281,7 +281,7 @@ req = operations.DeletePointsRequest(
         ),
     ),
     collection_name='expedita',
-    ordering=shared.WriteOrderingEnum.WEAK,
+    ordering=shared.WriteOrdering.WEAK,
     wait=False,
 )
 
@@ -456,7 +456,7 @@ req = operations.OverwritePayloadRequest(
         ],
     ),
     collection_name='aliquam',
-    ordering=shared.WriteOrderingEnum.MEDIUM,
+    ordering=shared.WriteOrdering.MEDIUM,
     wait=False,
 )
 
@@ -778,7 +778,7 @@ req = operations.RecommendPointsRequest(
         with_vector='vel',
     ),
     collection_name='architecto',
-    consistency=shared.ReadConsistencyTypeEnum.MAJORITY,
+    consistency=shared.ReadConsistencyType.MAJORITY,
 )
 
 res = s.points.recommend_points(req)
@@ -868,7 +868,7 @@ req = operations.ScrollPointsRequest(
         ],
     ),
     collection_name='nesciunt',
-    consistency=shared.ReadConsistencyTypeEnum.QUORUM,
+    consistency=shared.ReadConsistencyType.QUORUM,
 )
 
 res = s.points.scroll_points(req)
@@ -1148,7 +1148,7 @@ req = operations.SearchBatchPointsRequest(
         ],
     ),
     collection_name='dignissimos',
-    consistency=shared.ReadConsistencyTypeEnum.MAJORITY,
+    consistency=shared.ReadConsistencyType.MAJORITY,
 )
 
 res = s.points.search_batch_points(req)
@@ -1221,7 +1221,7 @@ req = operations.SearchPointsRequest(
         with_vector=False,
     ),
     collection_name='vero',
-    consistency=shared.ReadConsistencyTypeEnum.ALL,
+    consistency=shared.ReadConsistencyType.ALL,
 )
 
 res = s.points.search_points(req)
@@ -1302,7 +1302,7 @@ req = operations.SetPayloadRequest(
         ],
     ),
     collection_name='sunt',
-    ordering=shared.WriteOrderingEnum.STRONG,
+    ordering=shared.WriteOrdering.STRONG,
     wait=False,
 )
 
@@ -1356,7 +1356,7 @@ req = operations.UpsertPointsRequest(
         ),
     ),
     collection_name='possimus',
-    ordering=shared.WriteOrderingEnum.MEDIUM,
+    ordering=shared.WriteOrdering.MEDIUM,
     wait=False,
 )
 

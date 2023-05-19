@@ -17,7 +17,7 @@ class ListSnapshotsRequest:
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection"""
     
-class ListSnapshots200ApplicationJSONStatusEnum(str, Enum):
+class ListSnapshots200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -27,7 +27,7 @@ class ListSnapshots200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[list[shared_snapshotdescription.SnapshotDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[ListSnapshots200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[ListSnapshots200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

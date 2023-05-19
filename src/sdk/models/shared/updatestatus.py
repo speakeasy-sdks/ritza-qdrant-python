@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class UpdateStatusEnum(str, Enum):
+class UpdateStatus(str, Enum):
     r"""`Acknowledged` - Request is saved to WAL and will be process in a queue. `Completed` - Request is completed, changes are actual."""
     ACKNOWLEDGED = 'acknowledged'
     COMPLETED = 'completed'

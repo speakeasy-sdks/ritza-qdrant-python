@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class WriteOrderingEnum(str, Enum):
+class WriteOrdering(str, Enum):
     r"""Defines write ordering guarantees for collection operations
     
     * `weak` - write operations may be reordered, works faster, default

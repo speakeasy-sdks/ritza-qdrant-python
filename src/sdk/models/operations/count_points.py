@@ -20,7 +20,7 @@ class CountPointsRequest:
     count_request: Optional[shared_countrequest.CountRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Request counts of points which matches given filtering condition"""
     
-class CountPoints200ApplicationJSONStatusEnum(str, Enum):
+class CountPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -30,7 +30,7 @@ class CountPoints200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_countresult.CountResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[CountPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[CountPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

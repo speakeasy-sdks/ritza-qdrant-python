@@ -3,7 +3,5 @@
 from __future__ import annotations
 from enum import Enum
 
-class TokenizerTypeEnum(str, Enum):
-    PREFIX = 'prefix'
-    WHITESPACE = 'whitespace'
-    WORD = 'word'
+class TextIndexType(str, Enum):
+    TEXT = 'text'

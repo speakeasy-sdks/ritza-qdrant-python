@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class DistanceEnum(str, Enum):
+class Distance(str, Enum):
     r"""Type of internal tags, build from payload Distance function types used to compare vectors"""
     COSINE = 'Cosine'
     EUCLID = 'Euclid'

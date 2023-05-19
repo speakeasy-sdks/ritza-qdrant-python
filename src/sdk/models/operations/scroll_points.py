@@ -22,7 +22,7 @@ class ScrollPointsRequest:
     scroll_request: Optional[shared_scrollrequest.ScrollRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Pagination and filter parameters"""
     
-class ScrollPoints200ApplicationJSONStatusEnum(str, Enum):
+class ScrollPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -33,7 +33,7 @@ class ScrollPoints200ApplicationJSON:
     
     result: Optional[shared_scrollresult.ScrollResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Result of the points read request"""
-    status: Optional[ScrollPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[ScrollPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

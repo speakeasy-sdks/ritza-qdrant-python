@@ -3,5 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ScalarTypeEnum(str, Enum):
-    INT8 = 'int8'
+class TokenizerType(str, Enum):
+    PREFIX = 'prefix'
+    WHITESPACE = 'whitespace'
+    WORD = 'word'

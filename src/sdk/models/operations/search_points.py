@@ -22,7 +22,7 @@ class SearchPointsRequest:
     search_request: Optional[shared_searchrequest.SearchRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Search request with optional filtering"""
     
-class SearchPoints200ApplicationJSONStatusEnum(str, Enum):
+class SearchPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -32,7 +32,7 @@ class SearchPoints200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[list[shared_scoredpoint.ScoredPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[SearchPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[SearchPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ReplicaStateEnum(str, Enum):
+class ReplicaState(str, Enum):
     r"""State of the single shard within a replica set."""
     ACTIVE = 'Active'
     DEAD = 'Dead'

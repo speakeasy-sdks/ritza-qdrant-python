@@ -242,7 +242,7 @@ req = operations.RecoverFromUploadedSnapshotRequest(
         ),
     ),
     collection_name='laudantium',
-    priority=shared.SnapshotPriorityEnum.REPLICA,
+    priority=shared.SnapshotPriority.REPLICA,
     wait=False,
 )
 

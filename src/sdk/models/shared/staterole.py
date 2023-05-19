@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class StateRoleEnum(str, Enum):
+class StateRole(str, Enum):
     r"""Role of the peer in the consensus"""
     FOLLOWER = 'Follower'
     CANDIDATE = 'Candidate'

@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class SnapshotPriorityEnum(str, Enum):
+class SnapshotPriority(str, Enum):
     r"""Defines source of truth for snapshot recovery `Snapshot` means - prefer snapshot data over the current state `Replica` means - prefer existing data over the snapshot"""
     SNAPSHOT = 'snapshot'
     REPLICA = 'replica'

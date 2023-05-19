@@ -22,7 +22,7 @@ class SearchBatchPointsRequest:
     search_request_batch: Optional[shared_searchrequestbatch.SearchRequestBatch] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Search batch request"""
     
-class SearchBatchPoints200ApplicationJSONStatusEnum(str, Enum):
+class SearchBatchPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -32,7 +32,7 @@ class SearchBatchPoints200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[list[list[shared_scoredpoint.ScoredPoint]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[SearchBatchPoints200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[SearchBatchPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

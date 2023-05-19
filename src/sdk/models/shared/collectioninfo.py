@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import collectionconfig as shared_collectionconfig
-from ..shared import collectionstatus_enum as shared_collectionstatus_enum
+from ..shared import collectionstatus as shared_collectionstatus
 from ..shared import payloadindexinfo as shared_payloadindexinfo
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
@@ -18,7 +18,7 @@ class CollectionInfoOptimizerStatus2:
     
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     
-class CollectionInfoOptimizerStatus1Enum(str, Enum):
+class CollectionInfoOptimizerStatus1(str, Enum):
     r"""Optimizers are reporting as expected"""
     OK = 'ok'
 
@@ -39,7 +39,7 @@ class CollectionInfo:
     r"""Number of points (vectors + payloads) in collection Each point could be accessed by unique id"""
     segments_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segments_count') }})
     r"""Number of segments in collection. Each segment has independent vector as payload indexes"""
-    status: shared_collectionstatus_enum.CollectionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: shared_collectionstatus.CollectionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Current state of the collection. `Green` - all good. `Yellow` - optimization is running, `Red` - some operations failed and was not recovered"""
     vectors_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vectors_count') }})
     r"""Number of vectors in collection All vectors in collection are available for querying Calculated as `points_count x vectors_per_point` Where `vectors_per_point` is a number of named vectors in schema"""

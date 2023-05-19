@@ -80,13 +80,13 @@ req = operations.CreateCollectionRequest(
         replication_factor=568045,
         shard_number=392785,
         vectors=shared.VectorParams(
-            distance=shared.DistanceEnum.DOT,
+            distance=shared.Distance.DOT,
             hnsw_config='ab',
             quantization_config=shared.ScalarQuantization(
                 scalar=shared.ScalarQuantizationConfig(
                     always_ram=False,
                     quantile=871.29,
-                    type=shared.ScalarTypeEnum.INT8,
+                    type=shared.ScalarType.INT8,
                 ),
             ),
             size=648172,
@@ -125,7 +125,7 @@ req = operations.CreateFieldIndexRequest(
         field_schema='maiores',
     ),
     collection_name='molestiae',
-    ordering=shared.WriteOrderingEnum.STRONG,
+    ordering=shared.WriteOrdering.STRONG,
     wait=False,
 )
 
@@ -196,7 +196,7 @@ s = sdk.SDK()
 req = operations.DeleteFieldIndexRequest(
     collection_name='porro',
     field_name='dolorum',
-    ordering=shared.WriteOrderingEnum.WEAK,
+    ordering=shared.WriteOrdering.WEAK,
     wait=False,
 )
 
@@ -372,7 +372,7 @@ s = sdk.SDK()
 req = operations.RecoverFromSnapshotRequest(
     snapshot_recover=shared.SnapshotRecover(
         location='https://canine-harmonise.info',
-        priority=shared.SnapshotPriorityEnum.SNAPSHOT,
+        priority=shared.SnapshotPriority.SNAPSHOT,
     ),
     collection_name='impedit',
     wait=False,
@@ -404,7 +404,7 @@ req = operations.RecoverFromUploadedSnapshotRequest(
         ),
     ),
     collection_name='ipsum',
-    priority=shared.SnapshotPriorityEnum.REPLICA,
+    priority=shared.SnapshotPriority.REPLICA,
     wait=False,
 )
 

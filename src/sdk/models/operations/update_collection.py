@@ -23,7 +23,7 @@ class UpdateCollectionRequest:
     update_collection: Optional[shared_updatecollection.UpdateCollection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""New parameters"""
     
-class UpdateCollection200ApplicationJSONStatusEnum(str, Enum):
+class UpdateCollection200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -33,7 +33,7 @@ class UpdateCollection200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[UpdateCollection200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[UpdateCollection200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

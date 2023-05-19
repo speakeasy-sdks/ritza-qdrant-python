@@ -9,7 +9,7 @@ from enum import Enum
 from sdk import utils
 from typing import Any, Optional
 
-class SegmentConfigIndex2TypeEnum(str, Enum):
+class SegmentConfigIndex2Type(str, Enum):
     HNSW = 'hnsw'
 
 
@@ -20,9 +20,9 @@ class SegmentConfigIndex2:
     
     options: shared_hnswconfig.HnswConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options') }})
     r"""Config of HNSW index"""
-    type: SegmentConfigIndex2TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigIndex2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
-class SegmentConfigIndex1TypeEnum(str, Enum):
+class SegmentConfigIndex1Type(str, Enum):
     PLAIN = 'plain'
 
 
@@ -32,9 +32,9 @@ class SegmentConfigIndex1:
     r"""Do not use any index, scan whole vector collection during search. Guarantee 100% precision, but may be time consuming on large collections."""
     
     options: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options') }})
-    type: SegmentConfigIndex1TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigIndex1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
-class SegmentConfigPayloadStorageType2TypeEnum(str, Enum):
+class SegmentConfigPayloadStorageType2Type(str, Enum):
     ON_DISK = 'on_disk'
 
 
@@ -43,9 +43,9 @@ class SegmentConfigPayloadStorageType2TypeEnum(str, Enum):
 class SegmentConfigPayloadStorageType2:
     r"""Type of payload storage"""
     
-    type: SegmentConfigPayloadStorageType2TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigPayloadStorageType2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
-class SegmentConfigPayloadStorageType1TypeEnum(str, Enum):
+class SegmentConfigPayloadStorageType1Type(str, Enum):
     IN_MEMORY = 'in_memory'
 
 
@@ -54,9 +54,9 @@ class SegmentConfigPayloadStorageType1TypeEnum(str, Enum):
 class SegmentConfigPayloadStorageType1:
     r"""Type of payload storage"""
     
-    type: SegmentConfigPayloadStorageType1TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigPayloadStorageType1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
-class SegmentConfigStorageType2TypeEnum(str, Enum):
+class SegmentConfigStorageType2Type(str, Enum):
     MMAP = 'mmap'
 
 
@@ -65,9 +65,9 @@ class SegmentConfigStorageType2TypeEnum(str, Enum):
 class SegmentConfigStorageType2:
     r"""Type of vector storage"""
     
-    type: SegmentConfigStorageType2TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigStorageType2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
-class SegmentConfigStorageType1TypeEnum(str, Enum):
+class SegmentConfigStorageType1Type(str, Enum):
     IN_MEMORY = 'in_memory'
 
 
@@ -76,7 +76,7 @@ class SegmentConfigStorageType1TypeEnum(str, Enum):
 class SegmentConfigStorageType1:
     r"""Type of vector storage"""
     
-    type: SegmentConfigStorageType1TypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: SegmentConfigStorageType1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

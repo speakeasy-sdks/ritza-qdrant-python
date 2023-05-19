@@ -16,7 +16,7 @@ class CollectionsAggregatedTelemetryOptimizersStatus2:
     
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     
-class CollectionsAggregatedTelemetryOptimizersStatus1Enum(str, Enum):
+class CollectionsAggregatedTelemetryOptimizersStatus1(str, Enum):
     r"""Optimizers are reporting as expected"""
     OK = 'ok'
 

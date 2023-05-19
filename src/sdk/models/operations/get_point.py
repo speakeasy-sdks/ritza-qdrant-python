@@ -21,7 +21,7 @@ class GetPointRequest:
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
     r"""Define read consistency guarantees for the operation"""
     
-class GetPoint200ApplicationJSONStatusEnum(str, Enum):
+class GetPoint200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -32,7 +32,7 @@ class GetPoint200ApplicationJSON:
     
     result: Optional[shared_record.Record] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Point data"""
-    status: Optional[GetPoint200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[GetPoint200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

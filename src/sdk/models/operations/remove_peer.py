@@ -18,7 +18,7 @@ class RemovePeerRequest:
     force: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'force', 'style': 'form', 'explode': True }})
     r"""If true - removes peer even if it has shards/replicas on it."""
     
-class RemovePeer200ApplicationJSONStatusEnum(str, Enum):
+class RemovePeer200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -28,7 +28,7 @@ class RemovePeer200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[RemovePeer200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[RemovePeer200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

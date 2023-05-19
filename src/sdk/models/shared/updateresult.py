@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import updatestatus_enum as shared_updatestatus_enum
+from ..shared import updatestatus as shared_updatestatus
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 
@@ -13,6 +13,6 @@ class UpdateResult:
     
     operation_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operation_id') }})
     r"""Sequential number of the operation"""
-    status: shared_updatestatus_enum.UpdateStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: shared_updatestatus.UpdateStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""`Acknowledged` - Request is saved to WAL and will be process in a queue. `Completed` - Request is completed, changes are actual."""
     

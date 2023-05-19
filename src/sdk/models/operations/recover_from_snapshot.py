@@ -21,7 +21,7 @@ class RecoverFromSnapshotRequest:
     wait: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wait', 'style': 'form', 'explode': True }})
     r"""If true, wait for changes to actually happen. If false - let changes happen in background. Default is true."""
     
-class RecoverFromSnapshot202ApplicationJSONStatusEnum(str, Enum):
+class RecoverFromSnapshot202ApplicationJSONStatus(str, Enum):
     ACCEPTED = 'accepted'
 
 
@@ -30,11 +30,11 @@ class RecoverFromSnapshot202ApplicationJSONStatusEnum(str, Enum):
 class RecoverFromSnapshot202ApplicationJSON:
     r"""operation is accepted"""
     
-    status: Optional[RecoverFromSnapshot202ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[RecoverFromSnapshot202ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
-class RecoverFromSnapshot200ApplicationJSONStatusEnum(str, Enum):
+class RecoverFromSnapshot200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -44,7 +44,7 @@ class RecoverFromSnapshot200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[RecoverFromSnapshot200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[RecoverFromSnapshot200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     

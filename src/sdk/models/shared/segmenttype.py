@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class SegmentTypeEnum(str, Enum):
+class SegmentType(str, Enum):
     r"""Type of segment"""
     PLAIN = 'plain'
     INDEXED = 'indexed'

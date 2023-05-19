@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import createfieldindex as shared_createfieldindex
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import updateresult as shared_updateresult
-from ..shared import writeordering_enum as shared_writeordering_enum
+from ..shared import writeordering as shared_writeordering
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from sdk import utils
@@ -20,12 +20,12 @@ class CreateFieldIndexRequest:
     r"""Name of the collection"""
     create_field_index: Optional[shared_createfieldindex.CreateFieldIndex] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Field name"""
-    ordering: Optional[shared_writeordering_enum.WriteOrderingEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
+    ordering: Optional[shared_writeordering.WriteOrdering] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
     r"""define ordering guarantees for the operation"""
     wait: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wait', 'style': 'form', 'explode': True }})
     r"""If true, wait for changes to actually happen"""
     
-class CreateFieldIndex200ApplicationJSONStatusEnum(str, Enum):
+class CreateFieldIndex200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
@@ -35,7 +35,7 @@ class CreateFieldIndex200ApplicationJSON:
     r"""successful operation"""
     
     result: Optional[shared_updateresult.UpdateResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    status: Optional[CreateFieldIndex200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[CreateFieldIndex200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
