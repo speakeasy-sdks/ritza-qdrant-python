@@ -4,6 +4,7 @@ src/sdk/points.py
 src/sdk/service.py
 src/sdk/snapshots.py
 src/sdk/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/sdk/__init__.py
