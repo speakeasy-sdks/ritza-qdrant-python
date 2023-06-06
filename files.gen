@@ -1,3 +1,4 @@
+src/sdk/sdkconfiguration.py
 src/sdk/cluster.py
 src/sdk/collections.py
 src/sdk/points.py
