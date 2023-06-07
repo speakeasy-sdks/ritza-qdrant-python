@@ -2,7 +2,7 @@
 
 ## Overview
 
-API description for Qdrant vector search engine.
+Qdrant API: API description for Qdrant vector search engine.
 
 This document describes CRUD and search operations on collections of points (vectors with payload).
 
