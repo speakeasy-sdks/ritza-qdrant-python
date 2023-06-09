@@ -24,8 +24,8 @@ class SDKConfiguration:
     server_defaults: list[dict[str, str]] = field(default_factory=list)
     language: str = 'python'
     openapi_doc_version: str = 'master'
-    sdk_version: str = '1.13.0'
-    gen_version: str = '2.37.0'
+    sdk_version: str = '1.13.1'
+    gen_version: str = '2.37.2'
 
     def get_server_details(self) -> tuple[str, dict[str, str]]:
         if self.server_url:
