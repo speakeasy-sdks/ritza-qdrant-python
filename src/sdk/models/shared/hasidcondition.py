@@ -8,9 +8,10 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class HasIDCondition:
     r"""ID-based filtering condition"""
-    
     has_id: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('has_id') }})
     
+

@@ -8,13 +8,14 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SetPayload:
     r"""Set payload on points"""
-    
     payload: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload') }})
     filter: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
     r"""Assigns payload to each point that satisfy this filter condition"""
     points: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('points'), 'exclude': lambda f: f is None }})
     r"""Assigns payload to each point in this list"""
     
+

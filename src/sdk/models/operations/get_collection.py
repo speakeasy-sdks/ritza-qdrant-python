@@ -11,21 +11,23 @@ from sdk import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetCollectionRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve"""
     
+
+
 class GetCollection200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class GetCollection200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[shared_collectioninfo.CollectionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Current statistics and configuration of the collection"""
     status: Optional[GetCollection200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
@@ -33,9 +35,11 @@ class GetCollection200ApplicationJSON:
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetCollectionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -44,3 +48,4 @@ class GetCollectionResponse:
     r"""successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

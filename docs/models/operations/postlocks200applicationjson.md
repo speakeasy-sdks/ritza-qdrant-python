@@ -1,0 +1,12 @@
+# PostLocks200ApplicationJSON
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                    | [Optional[shared.LocksOption]](../../models/shared/locksoption.md)                                          | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
+| `status`                                                                                                    | [Optional[PostLocks200ApplicationJSONStatus]](../../models/operations/postlocks200applicationjsonstatus.md) | :heavy_minus_sign:                                                                                          | N/A                                                                                                         |
+| `time`                                                                                                      | *Optional[float]*                                                                                           | :heavy_minus_sign:                                                                                          | Time spent to process this request                                                                          |

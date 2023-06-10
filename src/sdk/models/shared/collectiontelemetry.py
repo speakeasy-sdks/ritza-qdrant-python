@@ -10,12 +10,13 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionTelemetry:
-    
     config: shared_collectionconfig.CollectionConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     init_time_ms: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('init_time_ms') }})
     shards: list[shared_replicasettelemetry.ReplicaSetTelemetry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shards') }})
     transfers: list[shared_shardtransferinfo.ShardTransferInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transfers') }})
     
+

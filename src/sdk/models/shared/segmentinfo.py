@@ -9,10 +9,10 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentInfo:
     r"""Aggregated information about segment"""
-    
     disk_usage_bytes: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('disk_usage_bytes') }})
     index_schema: dict[str, shared_payloadindexinfo.PayloadIndexInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index_schema') }})
     is_appendable: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_appendable') }})
@@ -23,3 +23,4 @@ class SegmentInfo:
     segment_type: shared_segmenttype.SegmentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('segment_type') }})
     r"""Type of segment"""
     
+

@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OptimizersConfig:
-    
     default_segment_number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('default_segment_number') }})
     r"""Target amount of segments optimizer will try to keep. Real amount of segments may vary depending on multiple parameters: - Amount of stored points - Current write RPS
     
@@ -34,3 +34,4 @@ class OptimizersConfig:
     memmap_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memmap_threshold'), 'exclude': lambda f: f is None }})
     r"""Maximum size (in KiloBytes) of vectors to store in-memory per segment. Segments larger than this threshold will be stored as read-only memmaped file. To enable memmap storage, lower the threshold Note: 1Kb = 1 vector of size 256 If not set, mmap will not be used."""
     
+

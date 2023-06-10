@@ -11,21 +11,23 @@ from sdk import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CollectionClusterInfoRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve the cluster info for"""
     
+
+
 class CollectionClusterInfo200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionClusterInfo200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[shared_collectionclusterinfo.CollectionClusterInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Current clustering distribution for the collection"""
     status: Optional[CollectionClusterInfo200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
@@ -33,9 +35,11 @@ class CollectionClusterInfo200ApplicationJSON:
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class CollectionClusterInfoResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     collection_cluster_info_200_application_json_object: Optional[CollectionClusterInfo200ApplicationJSON] = dataclasses.field(default=None)
@@ -44,3 +48,4 @@ class CollectionClusterInfoResponse:
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

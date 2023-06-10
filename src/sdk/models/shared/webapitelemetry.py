@@ -8,8 +8,9 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebAPITelemetry:
-    
     responses: dict[str, dict[str, shared_operationdurationstatistics.OperationDurationStatistics]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('responses') }})
     
+

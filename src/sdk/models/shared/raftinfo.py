@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RaftInfo:
     r"""Summary information about the current raft state"""
-    
     commit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('commit') }})
     r"""The index of the latest committed (finalized) operation that this peer is aware of."""
     is_voter: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_voter') }})
@@ -25,3 +25,4 @@ class RaftInfo:
     role: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
     r"""Role of this peer in the current term"""
     
+

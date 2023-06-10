@@ -12,9 +12,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class ScrollPointsRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve from"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
@@ -22,15 +22,17 @@ class ScrollPointsRequest:
     scroll_request: Optional[shared_scrollrequest.ScrollRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Pagination and filter parameters"""
     
+
+
 class ScrollPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ScrollPoints200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[shared_scrollresult.ScrollResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Result of the points read request"""
     status: Optional[ScrollPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
@@ -38,9 +40,11 @@ class ScrollPoints200ApplicationJSON:
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class ScrollPointsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -49,3 +53,4 @@ class ScrollPointsResponse:
     scroll_points_200_application_json_object: Optional[ScrollPoints200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

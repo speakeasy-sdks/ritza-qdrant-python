@@ -1,0 +1,12 @@
+# ClusterStatus200ApplicationJSON
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                            | *Optional[Any]*                                                                                                     | :heavy_minus_sign:                                                                                                  | Information about current cluster status and structure                                                              |
+| `status`                                                                                                            | [Optional[ClusterStatus200ApplicationJSONStatus]](../../models/operations/clusterstatus200applicationjsonstatus.md) | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |
+| `time`                                                                                                              | *Optional[float]*                                                                                                   | :heavy_minus_sign:                                                                                                  | Time spent to process this request                                                                                  |

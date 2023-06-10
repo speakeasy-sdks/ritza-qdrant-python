@@ -8,9 +8,9 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RemoteShardInfo:
-    
     peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id') }})
     r"""Remote peer id"""
     shard_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shard_id') }})
@@ -18,3 +18,4 @@ class RemoteShardInfo:
     state: shared_replicastate.ReplicaState = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""State of the single shard within a replica set."""
     
+

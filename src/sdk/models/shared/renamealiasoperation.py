@@ -8,10 +8,11 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RenameAliasOperation:
     r"""Change alias to a new one"""
-    
     rename_alias: shared_renamealias.RenameAlias = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rename_alias') }})
     r"""Change alias to a new one"""
     
+

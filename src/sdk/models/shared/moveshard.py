@@ -7,10 +7,11 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class MoveShard:
-    
     from_peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('from_peer_id') }})
     shard_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shard_id') }})
     to_peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('to_peer_id') }})
     
+

@@ -8,9 +8,10 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ChangeAliasesOperation:
     r"""Operation for performing changes of collection aliases. Alias changes are atomic, meaning that no collection modifications can happen between alias operations."""
-    
     actions: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('actions') }})
     
+

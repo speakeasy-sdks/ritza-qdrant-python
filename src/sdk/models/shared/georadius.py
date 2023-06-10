@@ -8,15 +8,16 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class GeoRadius:
     r"""Geo filter request
     
     Matches coordinates inside the circle of `radius` and center with coordinates `center`
     """
-    
     center: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('center') }})
     r"""Geo point payload schema"""
     radius: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('radius') }})
     r"""Radius of the area in meters"""
     
+

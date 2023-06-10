@@ -1,0 +1,10 @@
+# ClusterStatusTelemetryConsensusThreadStatus2
+
+Information about current consensus thread status
+
+
+## Fields
+
+| Field                                                                                                                                                         | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consensus_thread_status`                                                                                                                                     | [ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatus](../../models/shared/clusterstatustelemetryconsensusthreadstatus2consensusthreadstatus.md) | :heavy_check_mark:                                                                                                                                            | N/A                                                                                                                                                           |

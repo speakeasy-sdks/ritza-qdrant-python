@@ -1,0 +1,9 @@
+# DeleteCollectionRequest
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `collection_name`                                                                                               | *str*                                                                                                           | :heavy_check_mark:                                                                                              | Name of the collection to delete                                                                                |
+| `timeout`                                                                                                       | *Optional[int]*                                                                                                 | :heavy_minus_sign:                                                                                              | Wait for operation commit timeout in seconds. <br/>If timeout is reached - request will return with service error.<br/> |

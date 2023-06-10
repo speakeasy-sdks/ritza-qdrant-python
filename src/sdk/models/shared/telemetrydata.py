@@ -11,12 +11,13 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class TelemetryData:
-    
     app: shared_appbuildtelemetry.AppBuildTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app') }})
     cluster: shared_clustertelemetry.ClusterTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster') }})
     collections: shared_collectionstelemetry.CollectionsTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     requests: shared_requeststelemetry.RequestsTelemetry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requests') }})
     
+

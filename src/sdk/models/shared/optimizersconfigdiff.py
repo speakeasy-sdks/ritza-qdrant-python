@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OptimizersConfigDiff:
     r"""Custom params for Optimizers.  If none - values from service configuration file are used. This operation is blocking, it will only proceed ones all current optimizations are complete"""
-    
     default_segment_number: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('default_segment_number'), 'exclude': lambda f: f is None }})
     r"""Target amount of segments optimizer will try to keep. Real amount of segments may vary depending on multiple parameters: - Amount of stored points - Current write RPS
     
@@ -35,3 +35,4 @@ class OptimizersConfigDiff:
     vacuum_min_vector_number: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vacuum_min_vector_number'), 'exclude': lambda f: f is None }})
     r"""The minimal number of vectors in a segment, required to perform segment optimization"""
     
+

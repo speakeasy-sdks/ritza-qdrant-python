@@ -7,10 +7,11 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RenameAlias:
     r"""Change alias to a new one"""
-    
     new_alias_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('new_alias_name') }})
     old_alias_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('old_alias_name') }})
     
+

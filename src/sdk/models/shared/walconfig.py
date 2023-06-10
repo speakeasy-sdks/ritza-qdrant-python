@@ -7,11 +7,12 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WalConfig:
-    
     wal_capacity_mb: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wal_capacity_mb') }})
     r"""Size of a single WAL segment in MB"""
     wal_segments_ahead: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wal_segments_ahead') }})
     r"""Number of WAL segments to create ahead of actually used ones"""
     
+

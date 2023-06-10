@@ -8,9 +8,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionParams:
-    
     vectors: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vectors') }})
     r"""Vector params separator for single and multiple vector modes Single mode:
     
@@ -29,3 +29,4 @@ class CollectionParams:
     write_consistency_factor: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_consistency_factor'), 'exclude': lambda f: f is None }})
     r"""Defines how many replicas should apply the operation for us to consider it successful. Increasing this number will make the collection more resilient to inconsistencies, but will also make it fail if not enough replicas are available. Does not have any performance impact."""
     
+

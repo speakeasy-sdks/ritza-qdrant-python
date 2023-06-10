@@ -10,9 +10,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class UpdateCollectionClusterRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection on which to to apply the cluster update operation"""
     request_body: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
@@ -22,24 +22,28 @@ class UpdateCollectionClusterRequest:
     If timeout is reached - request will return with service error.
     """
     
+
+
 class UpdateCollectionCluster200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateCollectionCluster200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[UpdateCollectionCluster200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateCollectionClusterResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class UpdateCollectionClusterResponse:
     update_collection_cluster_200_application_json_object: Optional[UpdateCollectionCluster200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

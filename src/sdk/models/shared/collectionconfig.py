@@ -12,9 +12,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionConfig:
-    
     hnsw_config: shared_hnswconfig.HnswConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hnsw_config') }})
     r"""Config of HNSW index"""
     optimizer_config: shared_optimizersconfig.OptimizersConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizer_config') }})
@@ -22,3 +22,4 @@ class CollectionConfig:
     wal_config: shared_walconfig.WalConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wal_config') }})
     quantization_config: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantization_config'), 'exclude': lambda f: f is None }})
     
+

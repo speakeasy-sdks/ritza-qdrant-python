@@ -7,10 +7,11 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateAlias:
     r"""Create alternative name for a collection. Collection will be available under both names for search, retrieve,"""
-    
     alias_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('alias_name') }})
     collection_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection_name') }})
     
+

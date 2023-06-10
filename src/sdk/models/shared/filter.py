@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Filter:
     r"""Look only for points which satisfies this conditions"""
-    
     must: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('must'), 'exclude': lambda f: f is None }})
     r"""All conditions must match"""
     must_not: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('must_not'), 'exclude': lambda f: f is None }})
@@ -19,3 +19,4 @@ class Filter:
     should: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('should'), 'exclude': lambda f: f is None }})
     r"""At least one of those conditions should match"""
     
+

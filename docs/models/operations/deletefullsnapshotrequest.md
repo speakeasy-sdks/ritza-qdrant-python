@@ -1,0 +1,9 @@
+# DeleteFullSnapshotRequest
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `snapshot_name`                                                                                             | *str*                                                                                                       | :heavy_check_mark:                                                                                          | Name of the full snapshot to delete                                                                         |
+| `wait`                                                                                                      | *Optional[bool]*                                                                                            | :heavy_minus_sign:                                                                                          | If true, wait for changes to actually happen. If false - let changes happen in background. Default is true. |

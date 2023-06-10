@@ -8,13 +8,13 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RecommendRequest:
     r"""Recommendation request. Provides positive and negative examples of the vectors, which are already stored in the collection.
     
     Service should look for the points which are closer to positive examples and at the same time further to negative examples. The concrete way of how to compare negative and positive distances is up to implementation in `segment` crate.
     """
-    
     limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit') }})
     r"""Max number of result to return"""
     positive: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('positive') }})
@@ -38,3 +38,4 @@ class RecommendRequest:
     with_vector: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('with_vector'), 'exclude': lambda f: f is None }})
     r"""Whether to return the point vector with the result?"""
     
+

@@ -1,0 +1,12 @@
+# GetCollections200ApplicationJSON
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                              | [Optional[shared.CollectionsResponse]](../../models/shared/collectionsresponse.md)                                    | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |
+| `status`                                                                                                              | [Optional[GetCollections200ApplicationJSONStatus]](../../models/operations/getcollections200applicationjsonstatus.md) | :heavy_minus_sign:                                                                                                    | N/A                                                                                                                   |
+| `time`                                                                                                                | *Optional[float]*                                                                                                     | :heavy_minus_sign:                                                                                                    | Time spent to process this request                                                                                    |

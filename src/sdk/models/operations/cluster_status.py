@@ -20,45 +20,51 @@ class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3ConsensusThrea
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus3ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     err: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('err') }})
     
+
+
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThreadStatus(str, Enum):
     STOPPED = 'stopped'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus2ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     
+
+
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThreadStatus(str, Enum):
     WORKING = 'working'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatus200ApplicationJSONResult2ConsensusThreadStatus1ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     last_update: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_update'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     
+
+
 class ClusterStatus200ApplicationJSONResult2Status(str, Enum):
     ENABLED = 'enabled'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSONResult2:
     r"""Description of enabled cluster"""
-    
     consensus_thread_status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     r"""Information about current consensus thread status"""
     message_send_failures: dict[str, shared_messagesenderrors.MessageSendErrors] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message_send_failures') }})
@@ -71,26 +77,30 @@ class ClusterStatus200ApplicationJSONResult2:
     r"""Summary information about the current raft state"""
     status: ClusterStatus200ApplicationJSONResult2Status = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
+
+
 class ClusterStatus200ApplicationJSONResult1Status(str, Enum):
     DISABLED = 'disabled'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSONResult1:
     r"""Information about current cluster status and structure"""
-    
     status: ClusterStatus200ApplicationJSONResult1Status = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
+
+
 class ClusterStatus200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatus200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Information about current cluster status and structure"""
     status: Optional[ClusterStatus200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
@@ -98,9 +108,11 @@ class ClusterStatus200ApplicationJSON:
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class ClusterStatusResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     cluster_status_200_application_json_object: Optional[ClusterStatus200ApplicationJSON] = dataclasses.field(default=None)
@@ -109,3 +121,4 @@ class ClusterStatusResponse:
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

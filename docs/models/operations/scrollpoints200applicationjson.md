@@ -1,0 +1,12 @@
+# ScrollPoints200ApplicationJSON
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                          | [Optional[shared.ScrollResult]](../../models/shared/scrollresult.md)                                              | :heavy_minus_sign:                                                                                                | Result of the points read request                                                                                 |
+| `status`                                                                                                          | [Optional[ScrollPoints200ApplicationJSONStatus]](../../models/operations/scrollpoints200applicationjsonstatus.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `time`                                                                                                            | *Optional[float]*                                                                                                 | :heavy_minus_sign:                                                                                                | Time spent to process this request                                                                                |

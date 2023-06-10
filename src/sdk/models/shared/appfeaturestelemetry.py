@@ -7,10 +7,11 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AppFeaturesTelemetry:
-    
     debug: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('debug') }})
     service_debug_feature: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('service_debug_feature') }})
     web_feature: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('web_feature') }})
     
+

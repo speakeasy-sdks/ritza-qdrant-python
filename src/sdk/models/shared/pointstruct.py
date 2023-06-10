@@ -8,9 +8,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PointStruct:
-    
     id: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""Type, used for specifying point ID in user interface"""
     vector: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector') }})
@@ -18,3 +18,4 @@ class PointStruct:
     payload: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload'), 'exclude': lambda f: f is None }})
     r"""Payload values (optional)"""
     
+

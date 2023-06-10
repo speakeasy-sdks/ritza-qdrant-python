@@ -13,9 +13,9 @@ from sdk import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeletePayloadRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to delete from"""
     delete_payload: Optional[shared_deletepayload.DeletePayload] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
@@ -25,24 +25,28 @@ class DeletePayloadRequest:
     wait: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wait', 'style': 'form', 'explode': True }})
     r"""If true, wait for changes to actually happen"""
     
+
+
 class DeletePayload200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeletePayload200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[shared_updateresult.UpdateResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[DeletePayload200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class DeletePayloadResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_payload_200_application_json_object: Optional[DeletePayload200ApplicationJSON] = dataclasses.field(default=None)
@@ -51,3 +55,4 @@ class DeletePayloadResponse:
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

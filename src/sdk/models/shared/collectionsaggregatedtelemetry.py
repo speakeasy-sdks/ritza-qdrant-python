@@ -10,23 +10,26 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionsAggregatedTelemetryOptimizersStatus2:
     r"""Something wrong happened with optimizers"""
-    
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     
+
+
 class CollectionsAggregatedTelemetryOptimizersStatus1(str, Enum):
     r"""Optimizers are reporting as expected"""
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionsAggregatedTelemetry:
-    
     optimizers_status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizers_status') }})
     r"""Current state of the collection"""
     params: shared_collectionparams.CollectionParams = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('params') }})
     vectors: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vectors') }})
     
+

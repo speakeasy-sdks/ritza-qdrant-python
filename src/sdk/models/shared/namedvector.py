@@ -7,12 +7,13 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class NamedVector:
     r"""Vector data with name"""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Name of vector data"""
     vector: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector') }})
     r"""Vector data"""
     
+

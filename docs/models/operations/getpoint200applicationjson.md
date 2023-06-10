@@ -1,0 +1,12 @@
+# GetPoint200ApplicationJSON
+
+successful operation
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `result`                                                                                                  | [Optional[shared.Record]](../../models/shared/record.md)                                                  | :heavy_minus_sign:                                                                                        | Point data                                                                                                |
+| `status`                                                                                                  | [Optional[GetPoint200ApplicationJSONStatus]](../../models/operations/getpoint200applicationjsonstatus.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `time`                                                                                                    | *Optional[float]*                                                                                         | :heavy_minus_sign:                                                                                        | Time spent to process this request                                                                        |

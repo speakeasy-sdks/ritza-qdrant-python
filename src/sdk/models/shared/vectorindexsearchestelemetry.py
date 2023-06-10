@@ -9,9 +9,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class VectorIndexSearchesTelemetry:
-    
     filtered_exact: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filtered_exact') }})
     filtered_large_cardinality: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filtered_large_cardinality') }})
     filtered_plain: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filtered_plain') }})
@@ -21,3 +21,4 @@ class VectorIndexSearchesTelemetry:
     unfiltered_plain: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unfiltered_plain') }})
     index_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index_name'), 'exclude': lambda f: f is None }})
     
+

@@ -8,9 +8,10 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RecommendRequestBatch:
     r"""Request points based on positive and negative examples."""
-    
     searches: list[shared_recommendrequest.RecommendRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('searches') }})
     
+

@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Record:
     r"""Point data"""
-    
     id: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""Type, used for specifying point ID in user interface"""
     payload: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload'), 'exclude': lambda f: f is None }})
@@ -19,3 +19,4 @@ class Record:
     vector: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector'), 'exclude': lambda f: f is None }})
     r"""Vector of the point"""
     
+

@@ -14,19 +14,21 @@ class RecoverCurrentPeer200ApplicationJSONStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RecoverCurrentPeer200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[RecoverCurrentPeer200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class RecoverCurrentPeerResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -35,3 +37,4 @@ class RecoverCurrentPeerResponse:
     recover_current_peer_200_application_json_object: Optional[RecoverCurrentPeer200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

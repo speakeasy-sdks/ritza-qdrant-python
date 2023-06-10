@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FieldCondition:
     r"""All possible payload filtering conditions"""
-    
     key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key') }})
     r"""Payload key"""
     geo_bounding_box: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geo_bounding_box'), 'exclude': lambda f: f is None }})
@@ -25,3 +25,4 @@ class FieldCondition:
     values_count: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('values_count'), 'exclude': lambda f: f is None }})
     r"""Check number of values of the field"""
     
+

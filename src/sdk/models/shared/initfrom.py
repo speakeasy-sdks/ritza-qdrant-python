@@ -7,9 +7,10 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class InitFrom:
     r"""Operation for creating new collection and (optionally) specify index params"""
-    
     collection: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection') }})
     
+

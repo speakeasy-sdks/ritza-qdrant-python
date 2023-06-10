@@ -11,9 +11,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class GetPointRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve from"""
     id: Any = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
@@ -21,15 +21,17 @@ class GetPointRequest:
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
     r"""Define read consistency guarantees for the operation"""
     
+
+
 class GetPoint200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class GetPoint200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[shared_record.Record] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""Point data"""
     status: Optional[GetPoint200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
@@ -37,9 +39,11 @@ class GetPoint200ApplicationJSON:
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPointResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class GetPointResponse:
     r"""successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

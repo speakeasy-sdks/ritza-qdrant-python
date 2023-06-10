@@ -1,0 +1,9 @@
+# CreateSnapshotRequest
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `collection_name`                                                                                           | *str*                                                                                                       | :heavy_check_mark:                                                                                          | Name of the collection for which to create a snapshot                                                       |
+| `wait`                                                                                                      | *Optional[bool]*                                                                                            | :heavy_minus_sign:                                                                                          | If true, wait for changes to actually happen. If false - let changes happen in background. Default is true. |

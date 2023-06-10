@@ -12,22 +12,24 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionInfoOptimizerStatus2:
     r"""Something wrong happened with optimizers"""
-    
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     
+
+
 class CollectionInfoOptimizerStatus1(str, Enum):
     r"""Optimizers are reporting as expected"""
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionInfo:
     r"""Current statistics and configuration of the collection"""
-    
     config: shared_collectionconfig.CollectionConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('config') }})
     indexed_vectors_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('indexed_vectors_count') }})
     r"""Number of indexed vectors in the collection. Indexed vectors in large segments are faster to query, as it is stored in vector index (HNSW)"""
@@ -44,3 +46,4 @@ class CollectionInfo:
     vectors_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vectors_count') }})
     r"""Number of vectors in collection All vectors in collection are available for querying Calculated as `points_count x vectors_per_point` Where `vectors_per_point` is a number of named vectors in schema"""
     
+

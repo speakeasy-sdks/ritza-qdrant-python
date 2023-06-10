@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class HnswConfigDiff:
     r"""Custom params for HNSW index. If none - values from collection configuration are used."""
-    
     ef_construct: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ef_construct'), 'exclude': lambda f: f is None }})
     r"""Number of neighbours to consider during the index building. Larger the value - more accurate the search, more time required to build the index."""
     full_scan_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('full_scan_threshold'), 'exclude': lambda f: f is None }})
@@ -25,3 +25,4 @@ class HnswConfigDiff:
     payload_m: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payload_m'), 'exclude': lambda f: f is None }})
     r"""Custom M param for additional payload-aware HNSW links. If not set, default M will be used."""
     
+

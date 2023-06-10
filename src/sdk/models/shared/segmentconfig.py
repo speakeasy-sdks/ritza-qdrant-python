@@ -14,75 +14,93 @@ class SegmentConfigIndex2Type(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigIndex2:
     r"""Use filterable HNSW index for approximate search. Is very fast even on a very huge collections, but require additional space to store index and additional time to build it."""
-    
     options: shared_hnswconfig.HnswConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options') }})
     r"""Config of HNSW index"""
     type: SegmentConfigIndex2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
+
+
+
+
+@dataclasses.dataclass
+class SegmentConfigIndex1Options:
+    pass
+
 class SegmentConfigIndex1Type(str, Enum):
     PLAIN = 'plain'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigIndex1:
     r"""Do not use any index, scan whole vector collection during search. Guarantee 100% precision, but may be time consuming on large collections."""
-    
-    options: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options') }})
+    options: SegmentConfigIndex1Options = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options') }})
     type: SegmentConfigIndex1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
+
+
 class SegmentConfigPayloadStorageType2Type(str, Enum):
     ON_DISK = 'on_disk'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigPayloadStorageType2:
     r"""Type of payload storage"""
-    
     type: SegmentConfigPayloadStorageType2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
+
+
 class SegmentConfigPayloadStorageType1Type(str, Enum):
     IN_MEMORY = 'in_memory'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigPayloadStorageType1:
     r"""Type of payload storage"""
-    
     type: SegmentConfigPayloadStorageType1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
+
+
 class SegmentConfigStorageType2Type(str, Enum):
     MMAP = 'mmap'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigStorageType2:
     r"""Type of vector storage"""
-    
     type: SegmentConfigStorageType2Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
+
+
 class SegmentConfigStorageType1Type(str, Enum):
     IN_MEMORY = 'in_memory'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfigStorageType1:
     r"""Type of vector storage"""
-    
     type: SegmentConfigStorageType1Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SegmentConfig:
-    
     index: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index') }})
     r"""Vector index configuration of the segment"""
     storage_type: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('storage_type') }})
@@ -93,3 +111,4 @@ class SegmentConfig:
     quantization_config: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantization_config'), 'exclude': lambda f: f is None }})
     r"""Quantization parameters. If none - quantization is disabled."""
     
+

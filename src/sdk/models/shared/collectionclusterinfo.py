@@ -10,10 +10,10 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CollectionClusterInfo:
     r"""Current clustering distribution for the collection"""
-    
     local_shards: list[shared_localshardinfo.LocalShardInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('local_shards') }})
     r"""Local shards"""
     peer_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id') }})
@@ -25,3 +25,4 @@ class CollectionClusterInfo:
     shard_transfers: list[shared_shardtransferinfo.ShardTransferInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shard_transfers') }})
     r"""Shard transfers"""
     
+

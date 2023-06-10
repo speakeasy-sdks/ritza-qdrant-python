@@ -15,41 +15,47 @@ class ClusterStatusTelemetryConsensusThreadStatus3ConsensusThreadStatus(str, Enu
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatusTelemetryConsensusThreadStatus3:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus3ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     err: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('err') }})
     
+
+
 class ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatus(str, Enum):
     STOPPED = 'stopped'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatusTelemetryConsensusThreadStatus2:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus2ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     
+
+
 class ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatus(str, Enum):
     WORKING = 'working'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatusTelemetryConsensusThreadStatus1:
     r"""Information about current consensus thread status"""
-    
     consensus_thread_status: ClusterStatusTelemetryConsensusThreadStatus1ConsensusThreadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     last_update: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_update'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ClusterStatusTelemetry:
-    
     commit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('commit') }})
     consensus_thread_status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consensus_thread_status') }})
     r"""Information about current consensus thread status"""
@@ -60,3 +66,4 @@ class ClusterStatusTelemetry:
     peer_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('peer_id'), 'exclude': lambda f: f is None }})
     role: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
     
+

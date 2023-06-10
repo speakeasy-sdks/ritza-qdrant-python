@@ -11,9 +11,9 @@ from sdk import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UpdateCollectionRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to update"""
     timeout: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timeout', 'style': 'form', 'explode': True }})
@@ -23,24 +23,28 @@ class UpdateCollectionRequest:
     update_collection: Optional[shared_updatecollection.UpdateCollection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""New parameters"""
     
+
+
 class UpdateCollection200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateCollection200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[UpdateCollection200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateCollectionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -49,3 +53,4 @@ class UpdateCollectionResponse:
     update_collection_200_application_json_object: Optional[UpdateCollection200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

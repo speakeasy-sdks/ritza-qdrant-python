@@ -7,9 +7,10 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeleteAlias:
     r"""Delete alias if exists"""
-    
     alias_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('alias_name') }})
     
+

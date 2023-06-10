@@ -8,15 +8,16 @@ from sdk import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class GeoBoundingBox:
     r"""Geo filter request
     
     Matches coordinates inside the rectangle, described by coordinates of lop-left and bottom-right edges
     """
-    
     bottom_right: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bottom_right') }})
     r"""Geo point payload schema"""
     top_left: shared_geopoint.GeoPoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('top_left') }})
     r"""Geo point payload schema"""
     
+

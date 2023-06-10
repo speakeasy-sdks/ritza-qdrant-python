@@ -11,9 +11,9 @@ from sdk import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateCollectionRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the new collection"""
     create_collection: Optional[shared_createcollection.CreateCollection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
@@ -23,24 +23,28 @@ class CreateCollectionRequest:
     If timeout is reached - request will return with service error.
     """
     
+
+
 class CreateCollection200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateCollection200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[CreateCollection200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class CreateCollectionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_collection_200_application_json_object: Optional[CreateCollection200ApplicationJSON] = dataclasses.field(default=None)
@@ -49,3 +53,4 @@ class CreateCollectionResponse:
     r"""error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

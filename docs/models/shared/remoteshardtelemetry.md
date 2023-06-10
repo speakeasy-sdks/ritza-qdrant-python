@@ -1,0 +1,11 @@
+# RemoteShardTelemetry
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `peer_id`                                                                         | *Optional[int]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `searches`                                                                        | [OperationDurationStatistics](../../models/shared/operationdurationstatistics.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| `shard_id`                                                                        | *int*                                                                             | :heavy_check_mark:                                                                | N/A                                                                               |
+| `updates`                                                                         | [OperationDurationStatistics](../../models/shared/operationdurationstatistics.md) | :heavy_check_mark:                                                                | N/A                                                                               |

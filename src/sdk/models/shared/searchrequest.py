@@ -8,10 +8,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchRequest:
     r"""Search request. Holds all conditions and parameters for the search of most similar points by vector similarity given the filtering restrictions."""
-    
     limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit') }})
     r"""Max number of result to return"""
     vector: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vector') }})
@@ -36,3 +36,4 @@ class SearchRequest:
     with_vector: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('with_vector'), 'exclude': lambda f: f is None }})
     r"""Whether to return the point vector with the result?"""
     
+

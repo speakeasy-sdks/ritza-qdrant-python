@@ -12,9 +12,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class GetPointsRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to retrieve from"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
@@ -22,24 +22,28 @@ class GetPointsRequest:
     point_request: Optional[shared_pointrequest.PointRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""List of points to retrieve"""
     
+
+
 class GetPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class GetPoints200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[list[shared_record.Record]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[GetPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPointsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class GetPointsResponse:
     r"""successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

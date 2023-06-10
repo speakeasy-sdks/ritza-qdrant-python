@@ -10,22 +10,25 @@ from typing import Any
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OptimizerTelemetryStatus2:
     r"""Something wrong happened with optimizers"""
-    
     error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error') }})
     
+
+
 class OptimizerTelemetryStatus1(str, Enum):
     r"""Optimizers are reporting as expected"""
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OptimizerTelemetry:
-    
     optimizations: shared_operationdurationstatistics.OperationDurationStatistics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('optimizations') }})
     status: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Current state of the collection"""
     
+

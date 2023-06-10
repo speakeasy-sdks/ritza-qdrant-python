@@ -8,10 +8,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class LocksOption:
     r"""Lock options and optional error message"""
-    
     write: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write') }})
     error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_message'), 'exclude': lambda f: f is None }})
     
+

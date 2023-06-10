@@ -12,9 +12,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class RecommendBatchPointsRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to search in"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
@@ -22,24 +22,28 @@ class RecommendBatchPointsRequest:
     recommend_request_batch: Optional[shared_recommendrequestbatch.RecommendRequestBatch] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Request points based on positive and negative examples."""
     
+
+
 class RecommendBatchPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class RecommendBatchPoints200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[list[list[shared_scoredpoint.ScoredPoint]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[RecommendBatchPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class RecommendBatchPointsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class RecommendBatchPointsResponse:
     recommend_batch_points_200_application_json_object: Optional[RecommendBatchPoints200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

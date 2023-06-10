@@ -1,0 +1,9 @@
+# UpdateAliasesRequest
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `change_aliases_operation`                                                                                      | [Optional[shared.ChangeAliasesOperation]](../../models/shared/changealiasesoperation.md)                        | :heavy_minus_sign:                                                                                              | Alias update operations                                                                                         |
+| `timeout`                                                                                                       | *Optional[int]*                                                                                                 | :heavy_minus_sign:                                                                                              | Wait for operation commit timeout in seconds. <br/>If timeout is reached - request will return with service error.<br/> |

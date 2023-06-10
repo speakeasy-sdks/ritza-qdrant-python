@@ -9,10 +9,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class VectorDataConfig:
     r"""Config of single vector data storage"""
-    
     distance: shared_distance.Distance = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('distance') }})
     r"""Type of internal tags, build from payload Distance function types used to compare vectors"""
     size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('size') }})
@@ -22,3 +22,4 @@ class VectorDataConfig:
     quantization_config: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantization_config'), 'exclude': lambda f: f is None }})
     r"""Vector specific quantization config that overrides collection config"""
     
+

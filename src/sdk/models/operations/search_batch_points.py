@@ -12,9 +12,9 @@ from sdk import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class SearchBatchPointsRequest:
-    
     collection_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_name', 'style': 'simple', 'explode': False }})
     r"""Name of the collection to search in"""
     consistency: Optional[Any] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'consistency', 'style': 'form', 'explode': True }})
@@ -22,24 +22,28 @@ class SearchBatchPointsRequest:
     search_request_batch: Optional[shared_searchrequestbatch.SearchRequestBatch] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Search batch request"""
     
+
+
 class SearchBatchPoints200ApplicationJSONStatus(str, Enum):
     OK = 'ok'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchBatchPoints200ApplicationJSON:
     r"""successful operation"""
-    
     result: Optional[list[list[shared_scoredpoint.ScoredPoint]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     status: Optional[SearchBatchPoints200ApplicationJSONStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'exclude': lambda f: f is None }})
     r"""Time spent to process this request"""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchBatchPointsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class SearchBatchPointsResponse:
     search_batch_points_200_application_json_object: Optional[SearchBatchPoints200ApplicationJSON] = dataclasses.field(default=None)
     r"""successful operation"""
     
+

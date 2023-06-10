@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperationDurationStatistics:
-    
     count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})
     avg_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_duration_micros'), 'exclude': lambda f: f is None }})
     fail_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fail_count'), 'exclude': lambda f: f is None }})
@@ -21,3 +21,4 @@ class OperationDurationStatistics:
     max_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_duration_micros'), 'exclude': lambda f: f is None }})
     min_duration_micros: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_duration_micros'), 'exclude': lambda f: f is None }})
     
+
